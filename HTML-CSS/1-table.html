@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table example</title>
+</head>
+<body>
+    <table border="1">
+        <!-- sematic table header -->
+        <thead>
+            <tr>
+                <!-- table header  -->
+                <th>Name</th>
+                <th>Height</th>
+                <th>weight</th>
+            </tr>
+        </thead>
+        <!-- semantic table body -->
+        <tbody>
+            <!-- tr= table row -->
+            <tr>
+                <!--  td = table data -->
+                <td>tom</td>
+                <td>183 cm</td>
+                <td>78 kg</td>
+            </tr>
+            <tr>
+                <td>jack</td>
+                <td>192 Cm</td>
+                <td>93kg</td>
+            </tr>
+        </tbody>
+    </table>
+
+<!-- V2 colspan and rowspan-->
+<table border="1">
+    <thead>
+        <tr>
+            <!-- takes two rows spaces -->
+            <th rowspan="2">Name</th>
+            <!-- takes two columns spaces -->
+            <th colspan="2">Height</th>
+            <th rowspan="2">weight</th>
+        </tr>
+        <tr>
+            <th>Centimeter</th>
+            <th>Inch</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>tom</td>
+            <td>183 </td>
+            <td>72 </td>
+            <td>78 kg</td>
+        </tr>
+        <tr>
+            <td>jack</td>
+            <td>192 </td>
+            <td>75.5 </td>
+            <td>93kg</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
