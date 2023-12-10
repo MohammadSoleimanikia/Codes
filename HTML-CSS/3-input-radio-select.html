@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>radio button</title>
+</head>
+<body>
+    <form>
+    <!-- for grouping radio buttons all the names should be equal and for submition all radios should have value-->
+        <label for="Small">Small</label>
+        <input type="radio" name="size" id="Small" value="Small">
+        
+        <label for="medium">Medium</label>
+        <input type="radio" name="size" id="medium" value="medium">
+        
+        <label for="large">Large</label>
+        <input type="radio" name="size" id="large" value="large">
+
+        <label for="type">type: </label>
+        <select name="type" id="type">
+            <option value="Shirt">Shirt</option>
+            <!-- for preselection add selected attribute to oprtion -->
+            <option value="T-Shirt" selected>T-Shirt</option>
+            <option value="Coat">Coat</option>
+        </select>
+        <button>Submit</button>
+    </form>
+</body>
+</html>
