@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS cascade</title>
+</head>
+<body>
+    <style>
+        *{font-size: 1.5rem;}
+        /* order of CSS matters */
+        h2{color:red;}
+        h2{color:purple;}
+
+        /* ID > CLASS > ELEMENT  */
+        #red{color: red;}
+        .blue{color:blue;}
+        h3{colro:green;}
+    </style>
+    <h1>CSS cascade: The order of style</h1>
+    <h2>the last css selector applied</h2>
+    <p>score calculated like this : X Y Z ==> X=ID , Y=Class , Z=Element</p>
+    <h3 id="red" class="blue">ID selector(red) > class selector(blue) > Element selector()green the score is 100</h3>
+    <h4>.nav .item=020 > .nav p=011</h4>
+</body>
+</html>
