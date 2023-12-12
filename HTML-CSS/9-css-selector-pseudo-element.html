@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo element</title>
+</head>
+
+<body>
+    <style>
+        * {
+            font-size: 1.5rem;
+        }
+
+        h2::first-letter{color:red}
+        p::first-line{color:green}
+        /* for all of doc use this instead ::selection */
+        h3::selection{background-color: green;}
+    </style>
+    <h1>pseudo element css selector</h1>
+    <h2>first letter selected</h2>
+    <hr> 
+    <p>first line selected with ::first-line pseudo element<br> sit amet consectetur adipisicing elit. Voluptate doloremque, in sunt facilis ducimus fuga magni voluptatem, laborum ad blanditiis aperiam? Sint qui aperiam nulla ex illum tempore atque quidem.
+    Quis vel provident eligendi laborum ut, </p>
+    <h3>Select or highlight some part of the text</h3>
+</body>
+
+</html>
