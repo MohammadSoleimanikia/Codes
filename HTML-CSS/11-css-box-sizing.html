@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Sizing</title>
+</head>
+
+<body>
+    <style>
+        .border-box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border:10px solid orange;
+            box-sizing: border-box;
+        }
+        .content-box{
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            border:10px solid orange;
+            box-sizing: content-box;
+        }
+    </style>
+    <div class="border-box">
+        <h1>border box</h1>
+        <p>width=width=> 200 and border expand inside</p>
+    </div>
+    <div class="content-box">
+        <h1>Content box</h1>
+        <p>width=width+border => 200+10+10</p>
+    </div>
+
+</body>
+
+</html>
