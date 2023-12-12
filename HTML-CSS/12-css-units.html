@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Units</title>
+</head>
+
+<body>
+    <style>
+        .percent {
+            background-color: palevioletred;
+            width: 50%
+        }
+
+        b {
+            font-size: 2em;
+        }
+
+        .em {
+            font-size: 20px;
+            width:10em;
+            height:10em;
+            background-color: palegreen;
+        }
+        ul{
+            font-size: 1.5em;
+        }
+    </style>
+    <h1>CSS units</h1>
+    <hr>
+    <h2>percentage</h2>
+    <div class="percent">
+        <h2>percentage is relative to parent width=50% half of the page</h2>
+    </div>
+    <hr>
+    <h2>EM relative to parent element</h2>
+    <p>this is parrent <b>this is child</b> and the child font size is 2em = 2*parent-font size
+        <br> with other properties em equal to the font size of element
+    </p>
+    <div class="em">font-size:20px<br>width:10em => 10*20px</div>
+    <hr>
+    <h2>REM relative to root element(HTML)</h2>
+    <p>Using em could make snowball effect if used nested</p>
+    <p>using nested list and em as font size</p>
+    <ul>
+        <li>pasta
+            <ul>
+                <li>ravioli
+                    <ul>
+                        <li>spinach</li>
+                    </ul>
+                </li>
+                <li>penne</li>
+            </ul>
+        </li>
+        <li>salad</li>
+        <li>gelato</li>
+    </ul>
+    <p>as you can see each level makes the font bigger than the parent(top level) to makes this right use rem instead</p>
+    
+</body>
+
+</html>
