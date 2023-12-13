@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            background-color: darkkhaki;
+        }
+
+        .first {
+            transition: 1s;
+        }
+
+        .first:hover {
+            background-color: coral;
+            border-radius: 50%;
+        }
+
+        .second {
+            transition: border-radius 2s 1s;
+        }
+
+        .second:hover {
+            background-color: coral;
+            border-radius: 50%;
+        }
+
+        section div {
+            height: 100px;
+            width: 100px;
+            background-color: turquoise;
+            margin: 20px 0;
+            transition: margin-left 3s;
+        }
+
+        section:hover div {
+            margin-left: 500px;
+        }
+
+        div:nth-of-type(1) {
+            transition-timing-function: ease-in;
+        }
+
+        div:nth-of-type(2) {
+            transition-timing-function: ease-out;
+        }
+
+        div:nth-of-type(3) {
+            transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+        }
+
+        div:nth-of-type(4) {
+            transition-timing-function: cubic-bezier(0.85, 0, 0.15, 1);
+        }
+    </style>
+    <h1>transition:1s its apply for every thing</h1>
+    <div class="first"></div>
+
+    <h1>transition: property name | duration | timing function | delay</h1>
+    <h1>transition:border-radius 2s 1s;</h1>
+    <h2> its only appy to border-radius after one second delay</h2>
+
+    <div class="second"></div>
+    <h1>timing functions</h1>
+    <section>
+        <h3>ease in</h3>
+        <div></div>
+        <h3>ease out</h3>
+        <div></div>
+        <h3>cubic-bezier</h3>
+        <div></div>
+        <h3>cubic-bezier</h3>
+        <div></div>
+    </section>
+</body>
+
+</html>
