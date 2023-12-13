@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            color: rgb(0, 41, 144)
+        }
+
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: rgb(146, 146, 146);
+            border: 1px solid black;
+            display: inline-block;
+        }
+
+        .middle {
+            background-color: rgb(3, 121, 121);
+        }
+
+        .static .middle {
+            display: static;
+        }
+
+        .relative .middle {
+            position: relative;
+            top: 5px;
+            left: 10px;
+        }
+
+        .absolute .middle {
+            position: absolute;
+            top: 10px;
+            background-color: red;
+        }
+
+        .fixed .middle {
+            position: fixed;
+            background-color: green;
+            top:20px;
+            left:15px;
+        }
+    </style>
+    <h1>Position: statics didn't top and bottom attribute works(default position)</h1>
+    <section class="static">
+        <div></div>
+        <div class="middle"></div>
+        <div></div>
+    </section>
+
+    <h1>Position:relative(ofset from its own position) we can use top bottom left and right</h1>
+    <section class="relative">
+        <div></div>
+        <div class="middle"></div>
+        <div></div>
+    </section>
+
+    <h1>position:(red cube) absolute the element removed from the normal document flow and no space is created for the
+        element </h1>
+    <h2>its positioned relative to its closest positioned ancestor if there is not its positioned to the body</h2>
+    <h3>if want to position based on parent set parent position to absolute</h3>
+    <section class="absolute">
+        <div></div>
+        <div class="middle"></div>
+        <div></div>
+    </section>
+
+    <h1>Position:fixed stayed on page </h1>
+    <section class="fixed">
+        <div></div>
+        <div class="middle"></div>
+        <div></div>
+    </section>
+</body>
+
+</html>
