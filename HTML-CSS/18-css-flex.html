@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        hr {
+            height: 1rem;
+            background-color: #711DB0;
+        }
+
+        .container {
+            background-color: #F3F8FF;
+            width: 90%;
+            height: 200px;
+            margin: 0 auto;
+            border: 5px solid rgb(75, 75, 75);
+        }
+
+        .container div {
+            width: 70px;
+            height: 70px;
+        }
+
+        .row {
+            display: flex;
+            /* default value is row */
+            flex-direction: row;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .flex-end {
+            justify-content: flex-end;
+        }
+
+        .center {
+            justify-content: center;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .space-around {
+            justify-content: space-around;
+        }
+
+        .space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+        }
+
+        .cross-center {
+            align-items: center;
+        }
+
+        .cross-end {
+            align-items: flex-end;
+        }
+
+        .cross-baseline {
+            align-items: baseline;
+            font-size: 2rem;
+        }
+
+        .align-content-space {
+            align-content: space-between;
+        }
+
+        .align-content-start {
+            align-content: flex-start;
+        }
+
+        .self {
+            align-self: center;
+        }
+
+        .basis {
+            flex-basis: 700px;
+        }
+
+        .basis-container div {
+            flex-basis: 700px;
+        }
+
+        .grow {
+            flex-grow: 1;
+        }
+
+        .flex-grow div {
+            flex-grow: 1;
+            max-width: 150px;
+        }
+
+        .shrink {
+            flex-shrink: 2;
+        }
+
+        main {
+            display: flex;
+            height: 300px;
+        }
+
+        main .sidebar {
+            background-color: #711DB0;
+            flex: 1 2 300px;
+        }
+
+        main .maincontent {
+            background-color: #FFA732;
+            flex: 2 1 800px;
+        }
+    </style>
+    <h1>flex direction:</h1>
+    <h2>items is 200*200 but takes less space because of flex to takes all the space of the container</h2>
+    <h2>main axis in here is top to bottom (column)</h2>
+    <section class="container column">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+
+    <h2>main axis in here is left to right (row)</h2>
+    <section class="container row">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <hr>
+    <h1>justify content:</h1>
+    <h2>flex end: sticks to the end</h2>
+    <section class="container row flex-end">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+
+    <h2>center</h2>
+    <section class="container row center">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>space between</h2>
+    <section class="container row space-between">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>space around</h2>
+    <section class="container row space-around">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>space evenly</h2>
+    <section class="container row space-evenly">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <hr>
+    <h1>flex wrap</h1>
+    <h2>when container is smaller than the width of the items, items goes to another rows</h2>
+    <section class="container row wrap">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+    </section>
+    <hr>
+    <h1>align items:</h1>
+    <h2>works on cross axis</h2>
+    <h2>align-item:center</h2>
+    <section class="container row cross-center">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>align-item:flex-end</h2>
+    <section class="container row cross-end">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>align-item:baseline</h2>
+    <section class="container row cross-baseline">
+        <div style="background-color: #711DB0;height: 150px;">H</div>
+        <div style="background-color:#C21292;height: 50px">E</div>
+        <div style="background-color:#EF4040">L</div>
+        <div style="background-color:#FFA732;height: 200px;font-size: 3em;">L</div>
+        <div style="background-color:#E26EE5">O</div>
+    </section>
+    <hr>
+    <h1>align content</h1>
+    <h2>align the content (all item) if using wrap</h2>
+    <h2>space between</h2>
+    <section class="container row wrap align-content-space">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+    </section>
+    <h2>flex-start</h2>
+    <section class="container row wrap align-content-start">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+    </section>
+    <hr>
+    <h1>align self</h1>
+    <h2>works on an item</h2>
+    <section class="container row ">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040"></div>
+        <div class="self" style="background-color:#FFA732">align-self: center;</div>
+        <div style="background-color:#E26EE5"></div>
+        <div style="background-color:#EF4040"></div>
+        <div style="background-color:#FFA732"></div>
+    </section>
+    <hr>
+    <h1>flex basis - grow - shrink</h1>
+    <h2>felx basis define the initial size of an element(width for row and height for column)</h2>
+    <section class="container row">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div class="basis" style="background-color:#EF4040">flex-basis:400px</div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <hr>
+    <h2>flex grow</h2>
+    <section class="container row">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div class="grow" style="background-color:#EF4040">flex-grow:1</div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>if we set all divs flex grow all divs grow until takes all spaces</h2>
+    <h2>use wrap makes screen smaller</h2>
+    <h2>you can control how much it grows with set max-width:150px</h2>
+    <section class="container row wrap flex-grow">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#EF4040">flex-grow:1</div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <h2>flex shrink:wrap should be off</h2>
+    <h2>shrinks twice</h2>
+    <section class="container row basis-container ">
+        <div style="background-color: #711DB0"></div>
+        <div style="background-color:#C21292"></div>
+        <div class="shrink" style="background-color:#EF4040">flex-shrink:2</div>
+        <div style="background-color:#C21292"></div>
+        <div style="background-color:#FFA732"></div>
+        <div style="background-color:#E26EE5"></div>
+    </section>
+    <hr>
+    <h1>three value=>Flex: grow|shrink|basis </h1>
+    <h1>two value=>Flex: grow|shrink</h1>
+    <h1>one value=>Flex: grow|shrink</h1>
+    <main>
+        <div class="sidebar">side bar flex:1 2 300px;</div>
+        <div class="maincontent">main content flex:2 1 800px;</div>
+        <div class="sidebar">side bar</div>
+    </main>
+</body>
+
+</html>
