@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            font-size: 2rem;
+        }
+        nav div{
+            width:50%;
+            display: flex;
+            justify-content: space-between;
+        }
+        @media (max-width:700px) {
+            nav, nav div{
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+    <nav>
+        <a href="#">Home</a>
+        <div>
+            <a href="">Learn More</a>
+            <a href="">About</a>
+            <a href="">Contact</a>
+        </div>
+        <a href="">Sign Up</a>
+    </nav>
+</body>
+
+</html>
