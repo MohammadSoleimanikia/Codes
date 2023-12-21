@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import CSS file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <style>
+    </style>
+    <div class="container">
+        <h1 class="display-1">forms</h1>
+        <ol>
+            <li>add form-group div inside a form element</li>
+            <li>add form-control class to input</li>
+        </ol>
+        <form action="#">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control bg-secondary" id="email" placeholder="Email">
+            </div>
+            <div class="form-group">
+                <label for="password">Email</label>
+                <input type="password" class="form-control bg-secondary" id="password" placeholder="password">
+            </div>
+            
+            <div class="row">
+                <div class="form-group col-md-6">
+                    <label for="email">form-group col</label>
+                    <input type="email" class="form-control bg-secondary" id="email" placeholder="col-md-6 below medium takes12">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="password">form-group col</label>
+                    <input type="password" class="form-control bg-secondary" id="password" placeholder="col-md-6 below medium takes12">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="state">State</label>
+                <select class="form-control bg-secondary" name="state" id="state">
+                    <option value="al">alabama</option>
+                    <option value="ak">alaska</option>
+                </select>
+            </div>
+        </form>
+        <hr>
+        <h2>makes form larger or smaller with  or form-control-lg</h2>
+        <div class="form-group">
+            <label for="password">Email</label>
+            <input type="password" class="form-control-lg " id="password" placeholder="form-control-lg">
+        </div>
+        <div class="form-group">
+            <label for="password">Email</label>
+            <input type="password" class="form-control-sm " id="password" placeholder="form-control-sm">
+        </div>
+        <hr>
+        <h3>checkbox</h3>
+        <ol>
+            <li>add form-check as a container</li>
+            <li>add form-check-input to check box </li>
+            <li>add form-check-label to label </li>
+        </ol>
+        <div class="form-check ">
+            <input class="form-check-input bg-secondary" type="checkbox" value="" id="flexCheckChecked" checked>
+            <label class="form-check-label bg-secondary" for="flexCheckChecked">
+                Checked checkbox
+            </label>
+        </div>
+        <hr>
+        <h3>add form-switch to make switch input(form-check form-switch)</h3>
+        <div class="form-check form-switch">
+            <input class="form-check-input bg-secondary" type="checkbox" value="" id="flexCheckChecked1" checked>
+            <label class="form-check-label bg-secondary" for="flexCheckChecked1">
+                Checked checkbox
+            </label>
+        </div>
+        <h3>add btn class to button</h3>
+        <button class="btn btn-warning">btn btn-warning</button>
+    </div>
+
+    <!-- script should add to use all functionality of Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
