@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import CSS file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <style>
+    </style>
+    <div class="container">
+        <h1>border</h1>
+        <h3>add <b>border or border-(top,buttom,left,right)</b></h3>
+        <div class="border">border</div>
+        <div class="border-right">border-right</div>
+
+        <h3>color border-(danger,primary,...)</h3>
+        <div class="border border-danger">border border-danger</div>
+        <hr>
+        <h3>border radius add these class to an items</h3>
+        <div class="row">
+            <div class="col rounded bg-success text-white">rounded</div>
+            <div class="col rounded-top bg-success text-white">rounded-top</div>
+            <div class="col rounded-bottom bg-success text-white">rounded-buttom</div>
+            <div class="col rounded-pill bg-success text-white">rounded-pill</div>
+            <div class="col rounded-circle bg-success text-dark text-center " style="width: 200px; height: 200px;">
+                rounded-circle</div>
+        </div>
+        <hr>
+        <h3>shadow</h3>
+        <div class="row justify-content-between">
+            <div class="shadow col-sm-3 bg-dark text-white border border-success">shadow</div>
+            <div class="shadow-sm col-sm-3 bg-dark text-white border border-success">shadow-sm </div>
+            <div class="shadow-lg col-sm-3 bg-dark text-white border border-success">shadow-lg </div>
+        </div>
+
+        <hr>
+        <h3>padding</h3>
+        <h2>for add padding use <b>p-(0-5)</b> for EX:p-4</h2>
+        <div class="row justify-content-between align-items-center">
+            <div class="col-sm-1 bg-success text-white  p-0">p-0 </div>
+            <div class="col-sm-1 bg-success text-white  p-1">p-1</div>
+            <div class="col-sm-1 bg-success text-white  p-2"> p-2</div>
+            <div class="col-sm-1 bg-success text-white  p-3"> p-3</div>
+            <div class="col-sm-1 bg-success text-white  p-4"> p-4</div>
+            <div class="col-sm-1 bg-success text-white  p-5"> p-5</div>
+        </div>
+        <ul>
+            <li>use <b>pt-(0-5)</b> for padding top</li>
+            <li>use <b>pb-(0-5)</b> for padding button</li>
+            <li>ues <b>pe-(0-5)</b> for padding right(end)</li>
+            <li> use <b>ps-(0-5)</b> for padding left(start)</li>
+            <li>use <b>px</b> for left and right</li>
+            <li>use <b>py</b> for top and bottom</li>
+        </ul>
+        <div>
+            <button class="btn btn-primary pt-5">pt-5</button>
+            <button class="btn btn-primary pb-5"> pb-5</button>
+            <button class="btn btn-primary ps-5"> ps-5</button>
+            <button class="btn btn-primary pe-5"> pe-5</button>
+            <button class="btn btn-primary px-5"> px-5</button>
+            <button class="btn btn-primary py-5"> py-5</button>
+        </div>
+        <h2>use p-(sm,md,lg,xl)-(0-5) to make responsive button</h2>
+        <h2>!this button is responsive</h2>
+        <h3>p-0 p-sm-1 p-md-2 p-lg-3 p-xl-4</h3>
+        <button class="btn btn-danger p-0 p-sm-1 p-md-2 p-lg-3 p-xl-4">I change!</button>
+        <h3>for margin use <b>m</b> instead</h3>
+        <hr>
+        <h1>display property</h1>
+        <h3>.d-{breakpoint}-{value} for sm, md, lg, xl, and xxl.</h3>
+        <div class="row justify-content-between">
+            <div class="col-2 bg-warning d-none d-sm-block">displayed at small d-none d-sm-block</div>
+            <div class="col-2 bg-warning d-none d-md-block">displayed at medium</div>
+            <div class="col-2 bg-warning d-none d-lg-block">displayed at large</div>
+            <div class="col-2 bg-warning d-none d-xl-block">displayed at extra large</div>
+        </div>
+        <hr>
+        <h1>width</h1>
+        <h3>w-(number):w-25=25%</h3>
+        <div class="w-25 p-3 bg-secondary text-white">Width 25%</div>
+        <div class="w-50 p-3 bg-secondary text-white">Width 50%</div>
+        <div class="w-75 p-3 bg-secondary text-white">Width 75%</div>
+        <div class="w-100 p-3 bg-secondary text-white">Width 100%</div>
+        <div class="w-auto p-3 bg-secondary text-white">Width auto</div>
+
+        <h2>height</h2>
+        <div style="height: 100px;">
+            <div class="h-25 d-inline-block bg-success" style="width: 120px;">Height 25%</div>
+            <div class="h-50 d-inline-block bg-success" style="width: 120px;">Height 50%</div>
+            <div class="h-75 d-inline-block bg-success" style="width: 120px;">Height 75%</div>
+            <div class="h-100 d-inline-block bg-success" style="width: 120px;">Height 100%</div>
+            <div class="h-auto d-inline-block bg-success" style="width: 120px;">Height auto</div>
+          </div>
+          
+    </div>
+
+    <!-- script should add to use all functionality of Bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
