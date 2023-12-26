@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- import CSS file  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Bootstrap</title>
+</head>
+
+<body>
+    <style>
+    </style>
+    <div class="container">
+        <h1 class="text-center">Drop down</h1>
+        <h2>popper library should added</h2>
+        <ul>
+            <li>div with <b>dropdown</b> class</li>
+            <ul>
+                <li>button with <b>btn btn-primary dropdown-toggle</b> class and data-bs-toggle set to <b>dropdown</b>
+                </li>
+                <li> add ul with <b>dropdown-menu</b> class</li>
+                <ul>
+                    <li>li</li>
+                    <ul>
+                        <li><b>a</b> tag with <b>dropdown-item</b> class</li>
+                    </ul>
+                </ul>
+            </ul>
+        </ul>
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                Dropdown button
+            </button>
+            <ul class="dropdown-menu ">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <h2>sizing</h2>
+        <div class="dropdown d-inline">
+            <button class="btn btn-lg btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                btn-lg
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <div class="dropdown d-inline">
+            <button class="btn btn-sm btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                btn-sm
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <hr>
+        <h1>dark mode</h1>
+        <h5>add <b>data-bs-theme="dark"</b> to parent element (dropdown) to make it dark</h5>
+        <div class="dropdown d-inline" data-bs-theme="dark">
+            <button class="btn btn-sm btn-dark dropdown-toggle" data-bs-toggle="dropdown">
+                btn-sm
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+        </div>
+        <hr>
+        <h1>in navbar</h1>
+        <ul>
+            <li>add inside a <b>li</b> item with <b>nav-item dropdown</b></li>
+        </ul>
+        <ol>
+            <li><b>ul</b> with <b>navbar-nav</b> class</li>
+            <ol>
+                <li><b>li</b> with <b>nav-item dropdown</b> class</li>
+                <ul>
+                    <li>button with <b>btn btn-primary dropdown-toggle</b> class and data-bs-toggle set to
+                        <b>dropdown</b>
+                    </li>
+                    <li> add ul with <b>dropdown-menu</b> class</li>
+                    <ul>
+                        <li>li</li>
+                        <ul>
+                            <li><b>a</b> tag with <b>dropdown-item</b> class</li>
+                        </ul>
+                    </ul>
+                </ul>
+            </ol>
+        </ol>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <button class="btn btn-dark dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <hr>
+        <h1>drop up</h1>
+        <h5>use <b>dropup</b> in parent element instead of <b>dropdown</b></h5>
+        <div class="dropup mb-5">
+            <button class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown">drop up</button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">item</a></li>
+                <li><a class="dropdown-item" href="#">item</a></li>
+                <li><a class="dropdown-item" href="#">item</a></li>
+            </ul>
+        </div>
+        <hr>
+        <h1>dropend</h1>
+        <h5>use <b>dropend</b> instead of dropdown</h5>
+        <!-- Default dropend button -->
+        <div class="btn-group dropend">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Dropend
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">item</a></li>
+                <li><a class="dropdown-item" href="#">item</a></li>
+                <li><a class="dropdown-item" href="#">item</a></li>
+            </ul>
+        </div>
+        <hr>
+        <h1>alignment</h1>
+        <h5>add <b>.dropdown-menu-end</b> to <b>dropdown-menu</b>ul to right alignment</h5>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              Right-aligned menu example
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+          <hr>
+          <h1>responsive alignment</h1>
+          <div class="btn-group">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
+              Left-aligned but right aligned when large screen
+            </button>
+            <ul class="dropdown-menu dropdown-menu-lg-end">
+              <li><button class="dropdown-item" type="button">Action</button></li>
+              <li><button class="dropdown-item" type="button">Another action</button></li>
+              <li><button class="dropdown-item" type="button">Something else here</button></li>
+            </ul>
+          </div>
+          
+    </div>
+
+
+    <!-- import popper -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <!-- import Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
