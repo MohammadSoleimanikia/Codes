@@ -66,8 +66,6 @@ city[3]; //'y'
 
 // String Template Literals
 // Use backtick characters, NOT SINGLE QUOTES!
-// ========================
-const color = "olive green";
 // with template we can use vars in our string
 const msg = `My favorite color is: ${color}` //"My favorite color is: olive green"
 
