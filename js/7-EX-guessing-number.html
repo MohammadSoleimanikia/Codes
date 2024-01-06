@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing number</title>
+</head>
+
+<body>            
+    <script>
+        let maximum = parseInt(prompt("enter your maximum number"));
+        // NaN is false value
+        while (!maximum) {
+            maximum = parseInt(prompt("enter a valid number"));
+        }
+        // found a target num between one and maximum
+        let target = Math.floor(Math.random() * maximum) + 1;
+
+        let guess = prompt('enter your guess(q for exit )');
+
+        // trace number of attempts
+        let attempts=1;
+        // use parseInt only when want to compare to a number
+        while (parseInt(guess) !== target) {
+            attempts++;
+            if (guess ==='q')break;
+            if (parseInt(guess) > target) {
+                alert('your guess is higher than the number(type q for exit)');
+                guess = prompt('enter your guess');
+            }
+            else if (parseInt(guess) < target) {
+                alert('your guess is lower than the number(type q for exit)');
+                guess =prompt('enter your guess');
+            }
+            console.log('ok you quiting')
+        }
+        if(guess=='q'){
+            alert('ok you quiting')
+        }
+        else{
+            alert(`congrats!:it took you ${attempts} guess to find number`)
+        }
+    </script>
+</body>
+
+</html>
