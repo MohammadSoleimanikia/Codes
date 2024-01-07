@@ -24,3 +24,12 @@ console.log(comments[1].username);
 // nesting arrays in object 
 let student = { name: 'ali', grades: [80, 75] };
 console.log(student.grades[0])
+
+//get object keys
+let scores = {
+    mohammad: 12,
+    akbar:15
+}
+console.log(Object.keys(scores));
+// get object values
+console.log(Object.values(scores));

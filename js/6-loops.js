@@ -9,6 +9,15 @@ while(num<=10){
     console.log(num);
     num++;
 }
+// break keyword
+let j=0;
+while(true){
+j++
+console.log("j is",j);
+if (j==7){
+    break;
+}
+}
 // 3- for .. of using for iterating over an array
 let animals=['dog','cat','monkey'];
 for(item of animals){
@@ -25,4 +34,14 @@ for (row of nested){
         console.log(item);
     }
 }
-// 4- for .. in 
+// 4- for .. in give us the key in the objects
+    // objects are not iterable 
+let marks={
+    ali:10,
+    sara:15,
+    ahmad:12
+}
+for(person in marks){
+    console.log(person);
+    console.log(marks[person]);
+}
