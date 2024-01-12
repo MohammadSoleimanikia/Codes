@@ -23,6 +23,12 @@ let animals=['dog','cat','monkey'];
 for(item of animals){
     console.log(item);
 }
+
+//reverse order :
+for(item of animals.reverse()){
+    console.log(item);
+}
+
 // using for nested arrays
 let nested=[
     [11,12,13],
