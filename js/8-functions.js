@@ -48,3 +48,9 @@ cat.meow();
 // if we doesn't have name in our object it refer to window object(run in browser)
 let meow=function(){console.log(this, "meowed")}
 meow();
+
+//number of arguments in function:
+var argumentsLength = function(...args) {
+    return arguments.length;
+};
+console.log(argumentsLength(12,23));
