@@ -90,6 +90,7 @@ const total = prices.reduce((total, price) => total + price)
 console.log(total);
 
 // use to find min price
+// we can add third argument as initial value
 const min=prices.reduce((min,price)=>{
     if(price<min){return price;}
     return min;
