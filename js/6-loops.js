@@ -51,3 +51,11 @@ for(person in marks){
     console.log(person);
     console.log(marks[person]);
 }
+
+// continue key word skips one iteration
+for(let j=0;j<10;j++)
+    {
+    //the code skip the number if divided by 2(even numbers)
+        if(j%2==0){continue}
+        console.log("this is an odd number:",j);
+    }
