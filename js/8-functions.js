@@ -54,3 +54,10 @@ var argumentsLength = function(...args) {
     return arguments.length;
 };
 console.log(argumentsLength(12,23));
+
+
+// function without return statement returns undefined
+function withoutReturn(){
+    console.log("this function return undefined")
+}
+console.log(withoutReturn());
