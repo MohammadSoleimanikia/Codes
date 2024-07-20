@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: grid;
+        grid-template: 100px 100px/ 100px 100px;
+        gap: 5px;
+      }
+      .container-auto {
+        display: grid;
+        grid-template: 100px 100px/ 100px 100px;
+        grid-auto-rows: 100px;
+        gap: 5px;
+      }
+      .item {
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <p>we set our layout 2*2 extra items for example
+        the third row takes the content size as height</p>
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+    </div>
+    <p>to prevent this use grid auto row or column for
+        new items.</p>
+        <div class="container-auto">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+          </div>
+  </body>
+</html>
