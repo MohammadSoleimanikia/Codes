@@ -11,7 +11,8 @@
         <nav>
           <div>
             <!-- font-weight: ex: font-bold -->
-            <h1 class="font-bold uppercase">
+            <!-- padding:p-number -->
+            <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <a href="/">Taste Heaven</a>
             </h1>
           </div>
@@ -34,8 +35,8 @@
           </ul>
         </nav>
       </div>
-
-      <main>
+      <!-- padding on X and Y axis -->
+      <main class="px-16 py-6">
         <div>
           <a href="#">Log in</a>
           <a href="#">Sign up</a>
@@ -43,15 +44,16 @@
 
         <header>
           <!-- color:text-colorName-strength -->
-           <!-- font-size: text-size -->
+          <!-- font-size: text-size -->
           <h2 class="text-gray-700 text-6xl">Recipes</h2>
           <h3 class="text-2xl font-semibold">For costumers</h3>
         </header>
 
         <div>
-          <h4 class="font-bold">Latest Recipes</h4>
+          <!-- border-b:bottom border // border-color-strength-->
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
 
-          <div>
+          <div class="mt-8">
             <!-- cards go here -->
             <div>
               <img src="img/stew.jpg" alt="stew" />
@@ -62,9 +64,9 @@
             </div>
           </div>
 
-          <h4 class="font-bold">Most Popular</h4>
+          <h4 class="font-bold mt-12 border-b border-gray-200">Most Popular</h4>
 
-          <div>
+          <div class="mt-8">
             <!-- cards go here -->
           </div>
         </div>
