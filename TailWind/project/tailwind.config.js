@@ -12,6 +12,9 @@ module.exports = {
           // darker shade of the primary
           200:'#888883',
         }
+      },
+      fontFamily:{
+        body: ['Nunito']
       }
     },
   },
