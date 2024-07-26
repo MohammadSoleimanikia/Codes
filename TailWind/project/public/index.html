@@ -13,7 +13,10 @@
             <!-- font-weight: ex: font-bold -->
             <!-- padding:p-number -->
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
-              <a href="/">Taste Heaven</a>
+              <!-- text is green on mobile -->
+               <!-- on small screens it will be red , small:red and large become blue-->
+                <!-- on mobile text is small and on medium gets larger  -->
+              <a href="/" class="text-green-500 sm:text-red-500 lg:text-blue-500 text-sm md:text-xl">Taste Heaven</a>
             </h1>
           </div>
           <ul>
@@ -37,8 +40,8 @@
       </div>
       <!-- padding on X and Y axis -->
       <main class="px-16 py-6 ">
-        <!-- display:flex , justify-content:flex-end  -->
-        <div class="flex justify-end">
+        <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
+        <div class="flex justify-center md:justify-end ">
           <a href="#" class="text-primary">Log in</a>
           <a href="#" class="text-primary ml-2">Sign up</a>
         </div>
