@@ -564,6 +564,22 @@ video {
   margin-top: 2rem;
 }
 
+.ml-2{
+  margin-left: 0.5rem;
+}
+
+.flex{
+  display: flex;
+}
+
+.justify-end{
+  justify-content: flex-end;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
 .border{
   border-width: 1px;
 }
