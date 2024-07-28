@@ -6,49 +6,89 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="text-gray-600 font-body">
-    <div class="grid md:grid-cols-3"><!--content wrapper  -->
-      <div class="md:col-span-1">
-        <nav>
-          <div>
+    <div class="grid md:grid-cols-3">
+      <!--content wrapper  -->
+      <div class="md:col-span-1 md:flex md:justify-end">
+        <!-- text-right:text-align:right -->
+        <nav class="text-right">
+          <!-- item-center align items on cross axis -->
+          <div class="flex justify-between items-center"><!-- nav Container-->
             <!-- font-weight: ex: font-bold -->
             <!-- padding:p-number -->
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <!-- text is green on mobile -->
               <!-- on small screens it will be red , small:red and large become blue-->
               <!-- on mobile text is small and on medium gets larger  -->
-              <a
-                href="/"
-                class="hover:text-gray-700"
-                >Taste Heaven</a
-              >
+              <a href="/" class="hover:text-gray-700">Taste Heaven</a>
             </h1>
+            <!-- md:hidden : for large screen its gonna be hidden -->
+            <div class="px-4 cursor-pointer md:hidden" id="burger">
+              <svg class="w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+              
+            </div>
           </div>
-          <ul>
-            <li class="text-gray-700">
-              <a href="#">
+          <!-- hide on mobile screen and displayed on the larger screen -->
+          <ul class="text-sm mt-6 hidden md:block" id="menu">
+            <li class="text-gray-700 font-bold py-1 border-r-4 border-primary">
+              <a href="#" class="px-4 flex justify-end">
                 <span>Home</span>
-                <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+                  />
                 </svg>
-                
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="py-1 border-r-4 border-white">
+              <a href="#" class="px-4 flex justify-end">
                 <span>About</span>
-                <svg class="w-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z" />
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 5.25h.008v.008H12v-.008Z"
+                  />
                 </svg>
-                
               </a>
             </li>
-            <li>
-              <a href="#">
+            <li class="py-1 border-r-4 border-white">
+              <a href="#" class="px-4 flex justify-end">
                 <span>Contact</span>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                <svg
+                  class="w-5 ml-2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
+                  />
                 </svg>
-                
               </a>
             </li>
           </ul>
@@ -59,8 +99,16 @@
         <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
         <div class="flex justify-center md:justify-end">
           <!-- border is shown on medium screens -->
-          <a href="#" class="text-primary button border-primary md:border-2 hover:bg-primary hover:text-white">Log in</a>
-          <a href="#" class="text-primary ml-2 button border-primary md:border-2 hover:bg-primary hover:text-white">Sign up</a>
+          <a
+            href="#"
+            class="text-primary button border-primary md:border-2 hover:bg-primary hover:text-white"
+            >Log in</a
+          >
+          <a
+            href="#"
+            class="text-primary ml-2 button border-primary md:border-2 hover:bg-primary hover:text-white"
+            >Sign up</a
+          >
         </div>
 
         <header>
@@ -96,8 +144,20 @@
               <!-- rounded-full :make pill -->
               <!-- positioned absolute top-0 to place the badge on top of the parent  -->
               <div class="badge">
-                <svg class="w-5 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <svg
+                  class="w-5 inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
                 </svg>
                 <span>25 mins</span>
               </div>
@@ -114,8 +174,20 @@
                 <span class="block text-gray-500 text-sm">Recipe by Mario</span>
               </div>
               <div class="badge">
-                <svg class="w-5 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <svg
+                  class="w-5 inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
                 </svg>
                 <span>25 mins</span>
               </div>
@@ -131,8 +203,20 @@
                 <span class="block text-gray-500 text-sm">Recipe by Mario</span>
               </div>
               <div class="badge">
-                <svg class="w-5 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                <svg
+                  class="w-5 inline"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
                 </svg>
                 <span>25 mins</span>
               </div>
@@ -147,9 +231,14 @@
         </div>
         <div class="flex justify-center">
           <!-- background color: bg-color name -->
-          <div class="bg-secondary-100 text-secondary-200 button hover:shadow-inner">Load more</div>
+          <div
+            class="bg-secondary-100 text-secondary-200 button hover:shadow-inner"
+          >
+            Load more
+          </div>
         </div>
       </main>
     </div>
+  <script src="index.js"></script>
   </body>
 </html>
