@@ -18,7 +18,7 @@
               <!-- on mobile text is small and on medium gets larger  -->
               <a
                 href="/"
-                class="text-green-500 sm:text-red-500 lg:text-blue-500 text-sm md:text-xl"
+                class="hover:text-gray-700"
                 >Taste Heaven</a
               >
             </h1>
@@ -59,8 +59,8 @@
         <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
         <div class="flex justify-center md:justify-end">
           <!-- border is shown on medium screens -->
-          <a href="#" class="text-primary button border-primary md:border-2">Log in</a>
-          <a href="#" class="text-primary ml-2 button border-primary md:border-2">Sign up</a>
+          <a href="#" class="text-primary button border-primary md:border-2 hover:bg-primary hover:text-white">Log in</a>
+          <a href="#" class="text-primary ml-2 button border-primary md:border-2 hover:bg-primary hover:text-white">Sign up</a>
         </div>
 
         <header>
@@ -80,7 +80,7 @@
             <!-- cards go here -->
             <!-- overflow-hidden: anything that goes over the boundary is going to hidden -->
             <!-- positioned relative to set the badge absolute -->
-            <div class="card">
+            <div class="card hover:shadow-lg">
               <!-- w-full:  100% of its parent-->
               <!-- object-cover: height and width applied but it didn't stretch or distort -->
               <img
@@ -103,7 +103,7 @@
               </div>
             </div>
 
-            <div class="card">
+            <div class="card hover:shadow-lg">
               <img
                 src="img/noodles.jpg"
                 alt="noodles"
@@ -120,7 +120,7 @@
                 <span>25 mins</span>
               </div>
             </div>
-            <div class="card">
+            <div class="card hover:shadow-lg">
               <img
                 src="img/curry.jpg"
                 alt="curry"
@@ -147,7 +147,7 @@
         </div>
         <div class="flex justify-center">
           <!-- background color: bg-color name -->
-          <div class="bg-secondary-100 text-secondary-200 button">Load more</div>
+          <div class="bg-secondary-100 text-secondary-200 button hover:shadow-inner">Load more</div>
         </div>
       </main>
     </div>
