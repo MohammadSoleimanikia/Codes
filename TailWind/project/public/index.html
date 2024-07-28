@@ -39,7 +39,7 @@
         </nav>
       </div>
       <!-- padding on X and Y axis -->
-      <main class="px-16 py-6 ">
+      <main class="px-16 py-6 bg-gray-100">
         <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
         <div class="flex justify-center md:justify-end ">
           <a href="#" class="text-primary">Log in</a>
@@ -59,11 +59,14 @@
 
           <div class="mt-8">
             <!-- cards go here -->
-            <div>
-              <img src="img/stew.jpg" alt="stew" />
-              <div>
-                <span>5 Bean Chili Stew</span>
-                <span>Recipe by Mario</span>
+             <!-- overflow-hidden: anything that goes over the boundary is going to hidden -->
+            <div class="bg-white rounded overflow-hidden shadow-md">
+              <!-- w-full:  100% of its parent-->
+               <!-- object-cover: height and width applied but it didn't stretch or distort -->
+              <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover"/>
+              <div class="m-4">
+                <span class="font-bold">5 Bean Chili Stew</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
               </div>
             </div>
           </div>
