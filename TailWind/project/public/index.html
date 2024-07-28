@@ -14,9 +14,13 @@
             <!-- padding:p-number -->
             <h1 class="font-bold uppercase p-4 border-b border-gray-100">
               <!-- text is green on mobile -->
-               <!-- on small screens it will be red , small:red and large become blue-->
-                <!-- on mobile text is small and on medium gets larger  -->
-              <a href="/" class="text-green-500 sm:text-red-500 lg:text-blue-500 text-sm md:text-xl">Taste Heaven</a>
+              <!-- on small screens it will be red , small:red and large become blue-->
+              <!-- on mobile text is small and on medium gets larger  -->
+              <a
+                href="/"
+                class="text-green-500 sm:text-red-500 lg:text-blue-500 text-sm md:text-xl"
+                >Taste Heaven</a
+              >
             </h1>
           </div>
           <ul>
@@ -41,7 +45,7 @@
       <!-- padding on X and Y axis -->
       <main class="px-16 py-6 bg-gray-100">
         <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
-        <div class="flex justify-center md:justify-end ">
+        <div class="flex justify-center md:justify-end">
           <a href="#" class="text-primary">Log in</a>
           <a href="#" class="text-primary ml-2">Sign up</a>
         </div>
@@ -55,23 +59,65 @@
 
         <div>
           <!-- border-b:bottom border // border-color-strength-->
-          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">Latest Recipes</h4>
+          <h4 class="font-bold mt-12 pb-2 border-b border-gray-200">
+            Latest Recipes
+          </h4>
 
           <div class="mt-8">
             <!-- cards go here -->
-             <!-- overflow-hidden: anything that goes over the boundary is going to hidden -->
-            <div class="bg-white rounded overflow-hidden shadow-md">
+            <!-- overflow-hidden: anything that goes over the boundary is going to hidden -->
+            <!-- positioned relative to set the badge absolute -->
+            <div class="card">
               <!-- w-full:  100% of its parent-->
-               <!-- object-cover: height and width applied but it didn't stretch or distort -->
-              <img src="img/stew.jpg" alt="stew" class="w-full h-32 sm:h-48 object-cover"/>
+              <!-- object-cover: height and width applied but it didn't stretch or distort -->
+              <img
+                src="img/stew.jpg"
+                alt="stew"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
               <div class="m-4">
                 <span class="font-bold">5 Bean Chili Stew</span>
                 <span class="block text-gray-500 text-sm">Recipe by Mario</span>
               </div>
+              <!-- add the badge(time to cook) -->
+              <!-- rounded-full :make pill -->
+              <!-- positioned absolute top-0 to place the badge on top of the parent  -->
+              <div class="badge">
+                <span>25 mins</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <img
+                src="img/noodles.jpg"
+                alt="noodles"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">veg noodles</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <span>25 mins</span>
+              </div>
+            </div>
+            <div class="card">
+              <img
+                src="img/curry.jpg"
+                alt="curry"
+                class="w-full h-32 sm:h-48 object-cover"
+              />
+              <div class="m-4">
+                <span class="font-bold">tofu curry</span>
+                <span class="block text-gray-500 text-sm">Recipe by Mario</span>
+              </div>
+              <div class="badge">
+                <span>25 mins</span>
+              </div>
             </div>
           </div>
 
-          <h4 class="font-bold mt-12 border-b border-gray-200 ">Most Popular</h4>
+          <h4 class="font-bold mt-12 border-b border-gray-200">Most Popular</h4>
 
           <div class="mt-8">
             <!-- cards go here -->
