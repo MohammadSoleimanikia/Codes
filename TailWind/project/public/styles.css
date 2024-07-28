@@ -633,6 +633,16 @@ video {
   width: 1.5rem;
 }
 
+.scale-125{
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .cursor-pointer{
   cursor: pointer;
 }
@@ -805,6 +815,30 @@ video {
   color: rgb(136 136 131 / var(--tw-text-opacity));
 }
 
+.transition{
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-500{
+  transition-duration: 500ms;
+}
+
+.duration-1000{
+  transition-duration: 1000ms;
+}
+
+.duration-300{
+  transition-duration: 300ms;
+}
+
+.ease-out{
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
 .card{
   position: relative;
   overflow: hidden;
@@ -848,9 +882,19 @@ video {
   letter-spacing: 0.05em
 }
 
+.hover\:scale-125:hover{
+  --tw-scale-x: 1.25;
+  --tw-scale-y: 1.25;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-primary:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(255 99 99 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-opacity-50:hover{
+  --tw-bg-opacity: 0.5;
 }
 
 .hover\:text-gray-700:hover{
