@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body class="text-gray-600 font-body">
-    <div>
-      <div>
+    <div class="grid md:grid-cols-3"><!--content wrapper  -->
+      <div class="md:col-span-1">
         <nav>
           <div>
             <!-- font-weight: ex: font-bold -->
@@ -43,7 +43,7 @@
         </nav>
       </div>
       <!-- padding on X and Y axis -->
-      <main class="px-16 py-6 bg-gray-100">
+      <main class="px-16 py-6 bg-gray-100 md:col-span-2">
         <!-- display:flex , justify-content:center for mobile and after medium goes to left side   -->
         <div class="flex justify-center md:justify-end">
           <a href="#" class="text-primary">Log in</a>
@@ -63,7 +63,7 @@
             Latest Recipes
           </h4>
 
-          <div class="mt-8">
+          <div class="mt-8 grid lg:grid-cols-3 gap-10">
             <!-- cards go here -->
             <!-- overflow-hidden: anything that goes over the boundary is going to hidden -->
             <!-- positioned relative to set the badge absolute -->
