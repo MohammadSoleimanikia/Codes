@@ -18,6 +18,13 @@ if (j==7){
     break;
 }
 }
+
+// 2-1 do while 
+do {
+    yourName = prompt("Who are you?");
+  } while (!yourName);
+  console.log("Hello " + yourName);
+
 // 3- for .. of using for iterating over an array
 let animals=['dog','cat','monkey'];
 for(item of animals){

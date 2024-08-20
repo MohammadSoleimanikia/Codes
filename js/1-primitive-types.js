@@ -2,6 +2,9 @@
 1;
 1.54;
 -1.54;
+let num=5;
+// checking if the value is number
+console.log("number:",!Number.isNaN(num));
 //1-1-math
 2+2;
 2/2;
