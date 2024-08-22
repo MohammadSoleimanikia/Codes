@@ -34,8 +34,6 @@ Math.round(5.9)==6;
 
 // absolute value
 Math.abs(-10)==10;
-// NAN not a number
-0/0==NaN;
 
 // 2-string
 // Making Strings
