@@ -77,7 +77,6 @@ const str = `There are ${60 * 60 * 24} seconds in a day`//"There are 86400 secon
 // 3-boolean
 true;
 false;
-
 // 4-null
 // absence of value and must be assigned
 let loggedInUser=null;
