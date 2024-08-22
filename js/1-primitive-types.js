@@ -75,6 +75,11 @@ const str = `There are ${60 * 60 * 24} seconds in a day`//"There are 86400 secon
 // 3-boolean
 true;
 false;
+// equal sign
+// double equal doesn't check type 
+10=='10'
+// triple equal sign check the type also 
+10!=='10'
 // 4-null
 // absence of value and must be assigned
 let loggedInUser=null;
