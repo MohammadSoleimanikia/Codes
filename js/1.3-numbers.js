@@ -10,3 +10,8 @@ console.log(12%5);
 
 // NAN not a number
 0/0==NaN;
+
+// parse string to float
+parseFloat('20.45446');//20.45446
+// parse string to integer 
+parseInt('20.5454')//20
