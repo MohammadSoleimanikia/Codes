@@ -8,3 +8,8 @@ document.querySelector();
 
 // used in DOM
 window.scrollTo(0, 600)
+
+'abc'.toUpperCase()
+
+// timer callback 
+setTimeout(greetingFunc, 1000);

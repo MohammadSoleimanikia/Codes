@@ -1,6 +1,15 @@
 // block scoped variables (let and const)
 let myVar = "hello";
 
+// variables in function are scoped to the function.(local)
+function firstName() {
+    let personName = "jack";
+    return personName;
+}
+console.log((firstName()));//jack
+// console.log(personName); cause error because name is undefined
+
+
 // constant
 const myConst = "it can't change";
 
