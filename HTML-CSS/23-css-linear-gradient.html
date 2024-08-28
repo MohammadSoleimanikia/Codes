@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gradient</title>
+    <style>
+    .gradient {
+        height: 100vh;
+        /* linear-gradient([<angle> | to <side-or-corner>], <color-stop1>, <color-stop2>, ...) */
+        background: linear-gradient(300deg, #00bfff, #ff4c68, #ef8172);
+        /*background-size:width height*/
+        background-size: 180% 180%;
+        /* add transition effect to gradient */
+        animation: gradient-animation 18s ease infinite;
+      }
+
+      @keyframes gradient-animation {
+        0% {
+
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="gradient"></section>
+  </body>
+</html>
