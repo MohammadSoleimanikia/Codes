@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light"> <!-- Set default theme to light -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Mode Toggle</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Style for the card to set a maximum width */
+        .card {
+            max-width: 18rem; /* Limit the card width */
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5"> <!-- Main container with padding -->
+        <div class="d-flex justify-content-center mb-4"> <!-- Flexbox for centering buttons -->
+            <!-- Button to toggle dark mode -->
+            <button id="darkBtn" class="btn btn-primary me-2">Dark Mode</button>
+            <!-- Button to toggle light mode -->
+            <button id="lightBtn" class="btn btn-outline-secondary">Light Mode</button>
+        </div>
+
+        <div class="d-flex justify-content-center"> <!-- Flexbox for centering the card -->
+            <div class="card"> <!-- Bootstrap card component -->
+                <img src="https://via.placeholder.com/150" class="card-img-top" alt="Card Image"> <!-- Placeholder image -->
+                <div class="card-body"> <!-- Card body -->
+                    <h5 class="card-title">Card Title</h5> <!-- Card title -->
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> <!-- Card text -->
+                    <a href="#" class="btn btn-primary">Go somewhere</a> <!-- Button inside the card -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JavaScript bundle (includes Popper.js) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // dark mode works on ver 5
+        // Get the <html> element and buttons for dark and light mode
+        const html = document.documentElement; // Reference to the root <html> element
+        const darkBtn = document.getElementById('darkBtn'); // Dark mode button
+        const lightBtn = document.getElementById('lightBtn'); // Light mode button
+
+        // Event listener for dark mode button
+        darkBtn.addEventListener('click', () => {
+            html.setAttribute('data-bs-theme', 'dark'); // Set dark mode
+        });
+
+        // Event listener for light mode button
+        lightBtn.addEventListener('click', () => {
+            html.removeAttribute('data-bs-theme'); // Remove dark mode attribute to revert to light mode
+        });
+    </script>
+</body>
+</html>
