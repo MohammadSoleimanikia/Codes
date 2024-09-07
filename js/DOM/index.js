@@ -12,21 +12,36 @@ heading.innerHTML="good bye";
 // updating the style of the tag
 heading.style.color="red"
 
-//0- select an item with query selector selects the first item 
+//1- select an item with query selector selects the first item 
 // document.querySelector('li').innerHTML="changed by the query selector";
 
-// 0-select all items that match the selector 
+//1-1select all items that match the selector 
 document.querySelectorAll('li');
 
-// 0-1 select complex items
+// 1-2 select complex items
 document.querySelector('li a').innerHTML="changed"
 
 // types of selecting in JS
-//1-getElementsByTagName returns an array
+//1-3 getElementsBy TagName returns an array
 document.getElementsByTagName('li')[1].innerHTML="selected by the get element by tag name"
 
-//2-getElementsByClassName returns an array
-document.getElementsByClassName('btn')[0].innerHTML="btn selected by class name"
+//1-4getElementsBy ClassName returns an array
+let btn=document.getElementsByClassName('btn')[0];
+btn.innerHTML="btn selected by class name"
 
-// 3- select element by id :returns one value
+// 1-5 select element by id :returns one value
 document.getElementById('para').innerHTML="selected by id selector"
+
+//2 changing style of elements 
+// instead of '-' we use camel casing font-size =>fontSize
+btn.style.color='blue';
+
+//3- separation on concerns HTML for content structure, CSS for styling and presentation, 
+// and JavaScript for behavior and interactivity (not OK to change style in JS)
+// instead add class to the items (see style.css)
+btn.classList.add('border-rounded');
+
+// 4-toggle -> remove class if available and add if isn't available
+btn.addEventListener('click',()=>{
+    btn.classList.toggle('red-bg');
+})   
