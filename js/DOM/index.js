@@ -46,7 +46,7 @@ btn.addEventListener('click',()=>{
     btn.classList.toggle('red-bg');
 })   
 
-// text manipulation and text content property 
+//5- text manipulation and text content property 
 let title=document.getElementById('title');
 // <h2 id="title"> this is <strong>title</strong></h2>
 console.log(title.innerHTML);//  this is <strong>title</strong>
@@ -54,3 +54,11 @@ console.log(title.innerText);//this is title ->omit the html tags
 
 // with innerHTML we can add html codes too 
 title.innerHTML="<em>this</em> changed by the JS "
+
+//6- manipulate attribute (class,href,src and etc)
+let bing=document.getElementById('bing');
+// attributes give us a set of attributes
+// bing.attributes
+// getAttributes('attribute) choose a single attribute
+// setAttribute("attribute",new value) set an attribute
+bing.setAttribute('href','https://google.com')
