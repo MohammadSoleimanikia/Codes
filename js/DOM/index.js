@@ -45,3 +45,12 @@ btn.classList.add('border-rounded');
 btn.addEventListener('click',()=>{
     btn.classList.toggle('red-bg');
 })   
+
+// text manipulation and text content property 
+let title=document.getElementById('title');
+// <h2 id="title"> this is <strong>title</strong></h2>
+console.log(title.innerHTML);//  this is <strong>title</strong>
+console.log(title.innerText);//this is title ->omit the html tags
+
+// with innerHTML we can add html codes too 
+title.innerHTML="<em>this</em> changed by the JS "
