@@ -4,3 +4,10 @@
 .red-bg{
     background-color: rgb(241, 119, 119);
 }
+#drum{
+    width: 200px;
+    height: 50px;
+    background-color: aqua;
+    font-size: 3rem;
+    text-align: center;
+}

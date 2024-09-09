@@ -62,3 +62,10 @@ let bing=document.getElementById('bing');
 // getAttributes('attribute) choose a single attribute
 // setAttribute("attribute",new value) set an attribute
 bing.setAttribute('href','https://google.com')
+
+// 7-play music in JS
+let drum=document.getElementById('drum');
+drum.addEventListener('click',()=>{
+    var audio = new Audio('./tom-1.mp3');
+    audio.play();
+})
