@@ -67,5 +67,30 @@ bing.setAttribute('href','https://google.com')
 let drum=document.getElementById('drum');
 drum.addEventListener('click',()=>{
     var audio = new Audio('./tom-1.mp3');
+    // go to object section for more explanation (object constructor)
     audio.play();
 })
+
+// keyboard events 
+
+   // Function to change the color of the div
+   function changeColor(event) {
+    const lineDiv = document.getElementById('line');
+    switch (event.key) {
+        case 'r': // Change to red
+            lineDiv.style.backgroundColor = 'red';
+            break;
+        case 'g': // Change to green
+            lineDiv.style.backgroundColor = 'green';
+            break;
+        case 'b': // Change to blue
+            lineDiv.style.backgroundColor = 'blue';
+            break;
+        default:
+            lineDiv.style.backgroundColor = 'lightgray'; // Reset to original color
+            break;
+    }
+}
+// Add event listener for keydown
+document.addEventListener('keydown', changeColor);
+

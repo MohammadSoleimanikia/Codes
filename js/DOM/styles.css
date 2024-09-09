@@ -11,3 +11,9 @@
     font-size: 3rem;
     text-align: center;
 }
+#line{
+    width: 100vh;
+    height: 50px;
+    background-color: black;
+    color:white;
+}

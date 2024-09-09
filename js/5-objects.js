@@ -7,6 +7,18 @@ const dog = {
 }
 // All keys will be turned into strings!
 
+// make object with construction function 
+// the name should start with capitalized letter
+function Car (name, model, hasSunRoof){
+    this.name=name;
+    this.model=model;
+    this.hasSunRoof=hasSunRoof;
+    // we can also add method to the object  
+}
+let charger= new Car("dodge",'charger',true);
+console.log(charger); 
+
+
 // To retrieve a value:
 dog.age; //7
 dog["age"]; //7
@@ -33,3 +45,4 @@ let scores = {
 console.log(Object.keys(scores));
 // get object values
 console.log(Object.values(scores));
+
