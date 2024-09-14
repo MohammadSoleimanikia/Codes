@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "@types/node": "^22.5.4"
+  },
+  "name": "nodejs",
+  "version": "1.0.0",
+  "main": "file-system.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
