@@ -17,7 +17,8 @@ app.post("/check", (req, res) => {
   if (req.body["password"] == "123") {
     res.sendFile(__dirname + "/secret.html");
   } else {
-    res.send("<h1>wrong pass</h1>");
+    // redirect user to main page if password was wrong 
+    res.redirect("/");
   }
 });
 // handling homepage
