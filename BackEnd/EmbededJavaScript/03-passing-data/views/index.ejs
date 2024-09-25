@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>passing data</title>
+  </head>
+  <body>
+    <!-- use quote sign for HTML -->
+    <%- "<h1>Hello from ejs</h1>" %>
+    <%# 1-1 server to EJS data send %>
+    <%= name %>    
+    <%# 1-2 server to ejs (array) %>
+    <% numbers.forEach(number => {%>
+    <li> <%= number %></li>
+    <% }); %>
+
+    <%# handling if the data didn't pass and we want to use it %>
+    <%# this isn't working in EJS if(fruits) %>
+    <%# locals is a way to access all the variable that send with res.render %>
+    <% if (locals.fruits) { %>
+        <li>
+            <%= locals.fruits %>
+        </li>
+        <%# else should be using this way%>
+    <% } else { %>
+        <p>The variable is not available.</p>
+    <% } %>
+
+    <%# 2- ejs to server%>
+    <%# check if available %>
+    <% if(locals.numberOfLetter) {%>
+        <h1>
+            your name has <%=numberOfLetter%> character
+        </h1>
+    <% }else{ %>
+        <h1>enter your name.</h1>
+    <% } %>
+    <form action="/submit" method="post">
+        <input type="text" name="fName">
+        <input type="text" name="lName">
+        <input type="submit" value="ok">
+    </form>
+  </body>
+</html>
