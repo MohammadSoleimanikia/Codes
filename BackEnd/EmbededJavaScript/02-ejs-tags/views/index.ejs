@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejs tags</title>
+  </head>
+  <body>
+    <!--1-js output:used for add variable from index.js with res.render -->
+    <%= name %>
+    <!--2- executable java script(no output) -->
+     <!-- render fruits array -->
+    <% fruits.forEach(fruit => {%>
+        <li>
+            <!--3- use equal sign to out put the value  -->
+            <%= fruit %>
+        </li>
+        <% }) %>
+    <!--4- Render HTML: whatever is between these tag interpreted as HTML -->
+     <%- '<h1>this is test</h1>' %>
+     <!-- ejs comment  -->
+      <%#5- this is comment %>
+
+      <!--6- insert another ejs file -->
+       <%- include("footer.ejs") %>
+  </body>
+</html>
