@@ -12,4 +12,7 @@
 - in server to ejs we give and array of number and a name from server and displayed 
 - in ejs to server we use a form to submit a name and fName to server to calculate number of characters 
 
+### 02-static files  
+- using static files (styles, images, fonts)
+
 
