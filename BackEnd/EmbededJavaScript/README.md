@@ -12,7 +12,12 @@
 - in server to ejs we give and array of number and a name from server and displayed 
 - in ejs to server we use a form to submit a name and fName to server to calculate number of characters 
 
-### 02-static files  
+### 04-static files  
 - using static files (styles, images, fonts)
+- public folder
+- express.static
 
-
+### 05-ejs templating (partials)  
+-  partials, are reusable template components that can be included in multiple pages. This feature is particularly useful for maintaining consistent elements such as headers and footers across different web pages
+- like this : <%- include("partials-name")%>
+- in this example we use header and footer in all pages (partials)
