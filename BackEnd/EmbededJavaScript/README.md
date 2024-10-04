@@ -24,3 +24,10 @@
 -  partials, are reusable template components that can be included in multiple pages. This feature is particularly useful for maintaining consistent elements such as headers and footers across different web pages
 - like this : <%- include("partials-name")%>
 - in this example we use header and footer in all pages (partials)
+
+### 06-band-generator
+- using all of previous concepts
+- 1-handle requests 
+- 2-use static files 
+- 3-send data to ejs from server
+- 4-using partials (header and footer)
