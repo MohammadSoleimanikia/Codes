@@ -1,6 +1,9 @@
 ## EJS : Embedded java script
 - using js codes into html codes
 
+### 00-init-files
+- contain initialized base of project
+
 ### 01-example
 - render an EJS file that based on type of the day (week day or weekend) show some advice 
 
