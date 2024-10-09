@@ -34,3 +34,4 @@
 
 ### 06-Json
 - using JSON as data in our example
+- parse JSON into js object and use it 
