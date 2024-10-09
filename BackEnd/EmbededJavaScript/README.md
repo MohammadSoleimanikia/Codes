@@ -31,3 +31,6 @@
 - 2-use static files 
 - 3-send data to ejs from server
 - 4-using partials (header and footer)
+
+### 06-Json
+- using JSON as data in our example
