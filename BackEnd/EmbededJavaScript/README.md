@@ -35,3 +35,6 @@
 ### 06-Json
 - using JSON as data in our example
 - parse JSON into js object and use it 
+
+### 07-server-side0api-req
+- using Axios to make a server side request 
