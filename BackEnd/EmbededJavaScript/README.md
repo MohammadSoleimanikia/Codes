@@ -32,16 +32,19 @@
 - 3-send data to ejs from server
 - 4-using partials (header and footer)
 
-### 06-Json
+### 07-Json
 - using JSON as data in our example
 - parse JSON into js object and use it 
 
-### 07-server-side-api-req
+### 08-server-side-api-req
 - using Axios to make a server side request 
 
-### 08-API-authentication
+### 09-API-authentication
 - using all 4 type of authentication and authorization
 - 1- no Authentication: use API without any authentication
 - 2-Basic Auth: using userName and password for authentication
 - 3-API key: using API key for authentication 
 - 4- bearer token : using user and password to generate the bearer token then use it in API
+
+### 10-REST-APIs
+- using all types of http request with axios 
