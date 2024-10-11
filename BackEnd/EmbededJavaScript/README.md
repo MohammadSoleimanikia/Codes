@@ -38,3 +38,10 @@
 
 ### 07-server-side-api-req
 - using Axios to make a server side request 
+
+### 08-API-authentication
+- using all 4 type of authentication and authorization
+- 1- no Authentication: use API without any authentication
+- 2-Basic Auth: using userName and password for authentication
+- 3-API key: using API key for authentication 
+- 4- bearer token : using user and password to generate the bearer token then use it in API
