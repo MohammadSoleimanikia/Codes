@@ -48,3 +48,6 @@
 
 ### 10-REST-APIs
 - using all types of http request with axios 
+- in this example we use secret API for test 5 type of REST requests 
+- use get to get a secret, use post to post a secret ,use put to completely update secret
+- use patch to partially update secret(score) and use delete to remove a secret
