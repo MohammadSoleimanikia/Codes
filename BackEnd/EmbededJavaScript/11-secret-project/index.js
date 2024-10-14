@@ -10,10 +10,18 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   // 5. Use axios to get a random secret and pass it to index.ejs to display the
   // secret and the username of the secret.
-  const Response = await axios.get("https://secrets-api.appbrewery.com/random");
-  let secretAPI = Response.data.secret;
-  let userAPI = Response.data.username;
-  res.render("index.ejs", { secret: secretAPI, user: userAPI });
+  try {
+    const Response = await axios.get(
+      "https://secrets-api.appbrewery.com/random"
+    );
+    res.render("index.ejs", {
+      secret: Response.data.secret,
+      user: Response.data.username,
+    });
+  } catch (error) {
+    console.log(error.response.data);
+    res.status(500);
+  }
 });
 
 // 6. Listen on your predefined port and start the server.
