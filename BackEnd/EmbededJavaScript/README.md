@@ -51,3 +51,8 @@
 - in this example we use secret API for test 5 type of REST requests 
 - use get to get a secret, use post to post a secret ,use put to completely update secret
 - use patch to partially update secret(score) and use delete to remove a secret
+
+### 11-Secret-project
+- using the express to make server 
+- using axios to fetch data from a free API 
+- pass the fetched data from the API to the ejs files
