@@ -56,3 +56,8 @@
 - using the express to make server 
 - using axios to fetch data from a free API 
 - pass the fetched data from the API to the ejs files
+
+### 12-make-API
+- making API that can use for get ,post ,put ,patch and delete HTTP requests
+- using route parameter: /jokes/:id ex:/jokes/12
+- using query parameter: /filter?type=sport 
