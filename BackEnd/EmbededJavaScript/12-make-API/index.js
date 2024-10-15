@@ -8,30 +8,39 @@ const masterKey = "4VGP2DN-6EWM4SJ-N6FGRHV-Z3PR3TT";
 app.use(bodyParser.urlencoded({ extended: true }));
 
 //1. GET a random joke
-app.get('/random', (req, res)=>{
-  const randomIndex=Math.floor(Math.random()*jokes.length);
+app.get("/random", (req, res) => {
+  const randomIndex = Math.floor(Math.random() * jokes.length);
   res.json(jokes[randomIndex]);
-})
+});
 //2. GET a specific joke
 // :id is a route parameter. ex: if user hit /jokes/42 the id is equal to 42
 // query is ?id=2. params and query are different
-app.get('/jokes/:id',(req,res)=>{
+app.get("/jokes/:id", (req, res) => {
   // using route parameters with params.id
-  const id=parseInt(req.params.id);
+  const id = parseInt(req.params.id);
   // find method is used for arrays and return an element
-  const foundJoke=jokes.find((joke)=>joke.id===id);
+  const foundJoke = jokes.find((joke) => joke.id === id);
   res.json(foundJoke);
-})
+});
 //3. GET a jokes by filtering on the joke type
-app.get('/filter',(req,res)=>{
+app.get("/filter", (req, res) => {
   // using query parameters with query.type
-  const type=req.query.type;
+  const type = req.query.type;
   // filter method is used for arrays and returns array
-  const filteredActivity=jokes.filter((joke)=>joke.jokeType===type);
+  const filteredActivity = jokes.filter((joke) => joke.jokeType === type);
   res.json(filteredActivity);
-})
+});
 //4. POST a new joke
-
+app.post("/jokes", (req, res) => {
+  const newJoke={
+    id:jokes.length+1,
+    jokeText:req.body.text,
+    jokeType:req.body.type,
+  };
+  jokes.push(newJoke);
+  console.log(jokes.slice(-1));
+  res.json(newJoke);
+});
 //5. PUT a joke
 
 //6. PATCH a joke
