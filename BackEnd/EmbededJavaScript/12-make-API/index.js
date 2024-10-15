@@ -13,9 +13,23 @@ app.get('/random', (req, res)=>{
   res.json(jokes[randomIndex]);
 })
 //2. GET a specific joke
-
+// :id is a route parameter. ex: if user hit /jokes/42 the id is equal to 42
+// query is ?id=2. params and query are different
+app.get('/jokes/:id',(req,res)=>{
+  // using route parameters with params.id
+  const id=parseInt(req.params.id);
+  // find method is used for arrays and return an element
+  const foundJoke=jokes.find((joke)=>joke.id===id);
+  res.json(foundJoke);
+})
 //3. GET a jokes by filtering on the joke type
-
+app.get('/filter',(req,res)=>{
+  // using query parameters with query.type
+  const type=req.query.type;
+  // filter method is used for arrays and returns array
+  const filteredActivity=jokes.filter((joke)=>joke.jokeType===type);
+  res.json(filteredActivity);
+})
 //4. POST a new joke
 
 //5. PUT a joke
