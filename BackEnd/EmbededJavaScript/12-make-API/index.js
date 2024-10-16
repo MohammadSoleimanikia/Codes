@@ -73,16 +73,29 @@ app.patch("/jokes/:id", (req, res) => {
 //7. DELETE Specific joke
 app.delete("/jokes/:id", (req, res) => {
   const id = parseInt(req.params.id);
-  const searchIndex = jokes.findIndex((joke)=>joke.id===id);
-  if(searchIndex>-1){
-    jokes = jokes.filter((items)=>items.id!==id)
+  const searchIndex = jokes.findIndex((joke) => joke.id === id);
+  if (searchIndex > -1) {
+    jokes = jokes.filter((items) => items.id !== id);
     res.sendStatus(200);
-  }
-  else{
-    res.status(404).json({error:`joke with id: ${id} not found.`})
+  } else {
+    // chaining status with json
+    res.status(404).json({ error: `joke with id: ${id} not found.` });
   }
 });
-//8. DELETE All jokes
+//8. DELETE All jokes with API key
+app.delete("/all", (req, res) => {
+  // using route parameters with params.id
+  const userKey = req.query.key;
+  if (userKey === masterKey) {
+    jokes = [];
+    res.status(200);
+  } else {
+    res.status(404).json({ error: `unauthorized` });
+  }
+  // find method is used for arrays and return an element
+  const foundJoke = jokes.find((joke) => joke.id === id);
+  res.json(foundJoke);
+});
 
 app.listen(port, () => {
   console.log(`Successfully started server on port ${port}.`);
