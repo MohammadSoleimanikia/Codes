@@ -61,3 +61,4 @@
 - making API that can use for get ,post ,put ,patch and delete HTTP requests
 - using route parameter: /jokes/:id ex:/jokes/12
 - using query parameter: /filter?type=sport 
+- using API key to remove all items 
