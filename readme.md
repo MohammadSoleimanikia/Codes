@@ -1,16 +1,27 @@
-## code examples
-- in this repository I add the code examples and code snippets into two section 
-### back-end
-- in backend section I add the backend examples of:
-- 1-EJS
-- 2-express.js
-- 3-node.js
+# Code Examples Repository
 
-### front-end
-- in front end section I add the front-end examples of:
-- 1-JS
-- 2-HTML -CSS
-- 3- React
-- 4- Tailwind
-- 5- jQuery
-- 6- Bootstrap
+This repository contains a collection of code examples and snippets organized into two main sections: **Back-End** and **Front-End**.
+
+## Table of Contents
+
+- [Back-End Examples](#back-end-examples)
+- [Front-End Examples](#front-end-examples)
+
+## Back-End Examples
+
+In the Back-End section, I have included examples for the following technologies:
+
+1. EJS
+2. Express.js
+3. Node.js
+
+## Front-End Examples
+
+In the Front-End section, I have included examples for the following technologies:
+
+1. JavaScript (JS)
+2. HTML & CSS
+3. React
+4. Tailwind CSS
+5. jQuery
+6. Bootstrap
