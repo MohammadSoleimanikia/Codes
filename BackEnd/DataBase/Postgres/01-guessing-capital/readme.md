@@ -7,10 +7,7 @@ Welcome to the Capital City Quiz Application! This is a fun and interactive web 
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation)
-- [Usage](#usage)
-- [How It Works](#how-it-works)
-- [Contributing](#contributing)
-- [License](#license)
+- [Screenshots](#screenshots)
 
 ## Features
 
@@ -49,6 +46,6 @@ To set up this application locally, follow these steps:
     ```bash
    node index.js
 
-6. **Screenshots**
+## Screenshots
 
 ![screen shots](./public/images/screen.png)
