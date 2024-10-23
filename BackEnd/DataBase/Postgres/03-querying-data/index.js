@@ -24,18 +24,16 @@ app.use(express.static("public"));
 app.get("/", async (req, res) => {
   //Write your code here.
   
-  const result=await db.query("SELECT country_code FROM visited_countries",(err,res)=>{
+  const result=await db.query("SELECT country_code FROM visited_countries");
   let countries=[];
-  if (err) {
-    console.error("Error executing query", err.stack);
-  } else {
-    countries = res.rows;
-  }
+  result.rows.forEach((country)=>{
+    // extract countries code and add to countries array
+    countries.push(country.country_code);
+  });
+  res.render("index.ejs",{ countries: countries,total:countries.length});
   db.end();
 });
-  res.render("index.ejs",{ countries: countries,total:3});
   
-});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
