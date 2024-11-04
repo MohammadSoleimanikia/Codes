@@ -1,9 +1,10 @@
-import express, { query } from "express";
+import express from "express";
 import bodyParser from "body-parser";
-// importing postgreSQL module
 import pg from "pg";
 
-// connect to DB
+const app = express();
+const port = 3000;
+// make a connection
 const db = new pg.Client({
   user: "postgres",
   host: "localhost",
@@ -11,41 +12,67 @@ const db = new pg.Client({
   password: "12345",
   port: 5432,
 });
-// get countries
 db.connect();
 
-const app = express();
-const port = 3000;
-
+// use body parser as middle ware
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-// home page
-app.get("/", async (req, res) => {
-  //select codes from visited country table with SQL
+// add visited country to an array and return it
+async function checkVisited() {
   const result = await db.query("SELECT country_code FROM visited_countries");
+
   let countries = [];
   result.rows.forEach((country) => {
-    // extract countries code and add to countries array
     countries.push(country.country_code);
   });
+  return countries;
+}
+
+// GET home page
+app.get("/", async (req, res) => {
+  const countries = await checkVisited();
   res.render("index.ejs", { countries: countries, total: countries.length });
 });
 
+//INSERT new country
 app.post("/add", async (req, res) => {
-  const input = req.body.country;
-  // find the country code from countries table
-  // use $ sign as variable
-  const result = await db.query(
-    `SELECT country_code FROM countries WHERE country_name = $1`,
-    [input]
-  );
-  // if find a row in table
-  if(result.rows.length!==0){
-    const countryCode=result.rows[0].country_code
-    await db.query('INSERT INTO visited_countries (country_code) VALUES ($1);',[countryCode]);
+  const input = req.body["country"];
+// if cant find country in countries table 
+  try {
+    const result = await db.query(
+      "SELECT country_code FROM countries WHERE LOWER(country_name) LIKE '%' || $1 || '%'",
+      [input.toLowerCase()]
+    );
+
+    const data = result.rows[0];
+    const countryCode = data.country_code;
+    // if value is already existed
+    try {
+      // country_code is unique then if we add existing code we catch an error
+      await db.query(
+        "INSERT INTO visited_countries (country_code) VALUES ($1)",
+        [countryCode]
+      );
+      res.redirect("/");
+    } catch (err) {
+      console.log(err);
+      const countries = await checkVisited();
+      res.render("index.ejs", {
+        countries: countries,
+        total: countries.length,
+        error: "Country has already been added, try again.",
+      });
+    }
+  } catch (err) {
+    console.log(err);
+    const countries = await checkVisited();
+    res.render("index.ejs", {
+      countries: countries,
+      total: countries.length,
+      error: "Country name does not exist, try again.",
+    });
   }
-  res.redirect("/");
 });
 
 app.listen(port, () => {
