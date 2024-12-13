@@ -1,3 +1,6 @@
+// add this line into html header
+//<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
 // jQuery or $ sign used for jQuery
 $(document).ready(function () {
     // 1-selecting element
