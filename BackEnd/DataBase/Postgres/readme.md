@@ -31,7 +31,7 @@ db.query("SELECT * FROM flags", (err, res) => {
 ## 03- querying data:
 
 ## Project Overview
-This project is a simple Express.js application that interacts with a PostgreSQL database to manage a list of visited countries. Users can view their visited countries and add new countries to their list.
+This project is a simple Express.js application that interacts witc h a PostgreSQL database to manage a list of visited countries. Users can view their visited countries and add new countries to their list.
 
 # Example SQL Queries
 
