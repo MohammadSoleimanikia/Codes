@@ -2,11 +2,12 @@
 import express from "express";
 import bodyParser from "body-parser";
 import pg from "pg";
-import bcrypt from "bcrypt";
+import bcrypt from "bcrypt";//hash password using blowfish cipher
 
-const app = express(); // Creating an Express app instance
-const port = 3000; // Setting the port for the server
+const app = express(); 
+const port = 3000; 
 const saltRounds = 10; // Defining the number of salt rounds for hashing passwords
+// add more salt round make more secure
 
 // Middleware for parsing URL-encoded data
 app.use(bodyParser.urlencoded({ extended: true }));
