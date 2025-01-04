@@ -11,6 +11,10 @@
     ```sh
     npm create vite@latest my-react-app --template react
     ```
+for current directory
+    ```sh
+    npm create vite@latest . -- --template react
+    ```
 3. Follow the prompts to complete the setup.
 # Step 3: Change Directory
 
