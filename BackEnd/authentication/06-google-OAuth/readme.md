@@ -4,13 +4,13 @@ This guide will help you set up Google OAuth for your project, allowing users to
 
 ## Prerequisites
 
-- A Google/gmail account
+- A Google/ Gmail account
 
 ## Steps
 
 ### 1. Sign in to your Google Cloud Console
 
-Navigate to [Google Cloud Console](https://console.cloud.google.com/) and sign in with your Google/gmail account.
+Navigate to [Google Cloud Console](https://console.cloud.google.com/) and sign in with your Google/Gmail account.
 
 ### 2. Create a New Project
 
