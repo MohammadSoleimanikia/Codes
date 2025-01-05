@@ -5,10 +5,10 @@
   "keywords": [],
   "main": "src/index.tsx",
   "dependencies": {
-    "ajv": "^8.17.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-scripts": "^5.0.0"
+    "react-scripts": "^5.0.0",
+    "ajv": "^8.0.0"
   },
   "devDependencies": {
     "@types/react": "19.0.0",
@@ -22,10 +22,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  "browserslist": [">0.2%", "not dead", "not ie <= 11", "not op_mini all"]
 }
