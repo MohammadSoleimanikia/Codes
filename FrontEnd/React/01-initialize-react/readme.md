@@ -35,3 +35,17 @@ for current directory
         ```sh
         npm run dev
         ```
+
+        # Step 6: Remove Unnecessary Files
+
+        1. Delete any unnecessary files from the project directory. For example:
+            1. In your `src` directory, delete the following files:
+                - `App.css`
+                - `App.jsx` or `App.tsx`
+                - `main.jsx` or `main.tsx`
+                - `logo.svg` (or any example assets)
+        2. Update `src/App.jsx` and `src/main.jsx` to reflect these changes.
+
+        # Step 7: Customize Your App
+
+        1. Start building your React application by modifying the files in the `src` directory.
