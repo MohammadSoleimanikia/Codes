@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #1e1e2f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+  }
+  
+  .box {
+    width: 150px;
+    height: 150px;
+    background: #61dafb;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+  }
