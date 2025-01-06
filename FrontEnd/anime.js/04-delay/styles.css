@@ -30,11 +30,3 @@ body {
   .box:hover {
     transform: scale(1.1);
   }
-  .number{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    width: 60px;
-    height: 60px;
-  }
