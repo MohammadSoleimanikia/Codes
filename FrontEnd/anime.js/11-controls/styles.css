@@ -1,0 +1,53 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: #1e1e2f;
+    font-family: Arial, sans-serif;
+    color: #fff;
+  }
+  
+  .container {
+    display: flex;
+    
+    gap: 20px;
+  }
+  
+  .box {
+    position: absolute;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background: #61dafb;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .box:hover {
+    transform: scale(1.1);
+  }
+  .seek-anim-demo {
+    margin: 50px;
+  }
+
+  .el {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    margin: 10px;
+    display: inline-block;
+  }
+
+  .progress {
+    display: block;
+    margin: 20px 0;
+    width: 300px;
+  }
