@@ -1,0 +1,24 @@
+body {
+  color: #333;
+  background-color: #3498db;
+  font-size: 3rem;
+}
+
+nav ul {
+  list-style: none;
+}
+nav li {
+  display: inline;
+}
+nav a {
+  text-decoration: none;
+}
+
+a {
+  color: blue;
+}
+a:hover {
+  color: darkblue;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,34 @@
+// Variables
+$primary-color: #3498db;
+$text-color: #333;
+$text-size:3rem;
+
+body{
+    color :$text-color;
+    background-color: $primary-color;
+    font-size: $text-size;
+}
+// nesting
+nav {
+    ul {
+      list-style: none;
+    }
+
+    li {
+      display: inline;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+// nesting Pseudo-classes.
+  a {
+    color: blue;
+
+    &:hover {
+      color: darkblue;
+    }
+  }
+
+//
