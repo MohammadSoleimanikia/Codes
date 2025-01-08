@@ -1,0 +1,21 @@
+// import partials 
+@import 'variables';
+
+body {
+    font-size: $font-medium;
+    color: $text-color;
+    background-color: $background-color;
+    margin: $spacing-medium;
+  }
+  
+  .button {
+    background-color: $primary-color;
+    color: #fff;
+    padding: $spacing-small $spacing-medium;
+    border: none;
+    border-radius: 5px;
+  
+    &:hover {
+      background-color: $secondary-color;
+    }
+  }

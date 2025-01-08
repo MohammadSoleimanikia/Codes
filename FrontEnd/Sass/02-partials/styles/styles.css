@@ -1,0 +1,19 @@
+body {
+  font-size: 1rem;
+  color: #333;
+  background-color: #f4f4f4;
+  margin: 1rem;
+}
+
+.button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+}
+.button:hover {
+  background-color: #2ecc71;
+}
+
+/*# sourceMappingURL=styles.css.map */
