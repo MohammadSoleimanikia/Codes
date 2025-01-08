@@ -1,6 +1,9 @@
-// import partials 
-@import 'variables';
+// import modules
+@use 'modules';
 
+// import partials 
+// all of file imported 
+@import 'variables';
 body {
     font-size: $font-medium;
     color: $text-color;
@@ -12,7 +15,8 @@ body {
     background-color: $primary-color;
     color: #fff;
     padding: $spacing-small $spacing-medium;
-    border: none;
+    // modules using
+    border: 5px solid modules.$cool-color;
     border-radius: 5px;
   
     &:hover {

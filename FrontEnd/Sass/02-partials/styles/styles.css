@@ -9,7 +9,7 @@ body {
   background-color: #3498db;
   color: #fff;
   padding: 0.5rem 1rem;
-  border: none;
+  border: 5px solid rgb(216, 155, 81);
   border-radius: 5px;
 }
 .button:hover {
