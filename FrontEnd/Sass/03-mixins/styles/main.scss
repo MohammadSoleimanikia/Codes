@@ -1,0 +1,23 @@
+// define a mixin
+@mixin button-styles($bg-color, $text-color) {
+    background-color: $bg-color;
+    color: $text-color;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+  
+    &:hover {
+      background-color: darken($bg-color, 10%);
+    }
+  }  
+// use mixin :
+.button-primary {
+    @include button-styles(#3498db, #fff);
+  }
+  
+  .button-secondary {
+    @include button-styles(#2ecc71, #fff);
+  }
+  
