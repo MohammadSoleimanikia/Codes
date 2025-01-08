@@ -1,0 +1,10 @@
+// Variables
+$primary-color: #3498db;
+$text-color: #333;
+$text-size:3rem;
+
+body{
+    color :$text-color;
+    background-color: $primary-color;
+    font-size: $text-size;
+}
