@@ -9,7 +9,7 @@
 1. Open your terminal.
 2. Run the following command:
     ```sh
-    npm create vite@latest my-react-app --template react
+    npm create vite@latest react-project
     ```
 for current directory
     ```sh
