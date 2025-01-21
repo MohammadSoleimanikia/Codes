@@ -8,7 +8,7 @@ const numbers = [1, 2, 3];
 // Using spread operator to pass array elements as individual arguments
 console.log(sum(...numbers)); // 6
 
-// Spread in array literals
+// Spread in array literals (merging)
 const arr1 = [1, 2, 3];
 const arr2 = [4, 5, 6];
 // Using spread operator to combine arrays
@@ -31,12 +31,6 @@ let nums=[1,2,3]
 console.log(Math.max(nums));//NaN. we should use spread to spread nums as arguments
 console.log(Math.max(...nums));//3
 
-// merge arrays with spread
-let cat=['blue','rocket','scout'];
-let dog=['rusty','wyatt'];
-
-let pets=[...cat,...dog];
-console.log(pets);
 
 // copy properties from one object into another object.
 const dataFromForm = {
