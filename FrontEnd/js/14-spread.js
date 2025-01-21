@@ -1,4 +1,28 @@
-// spread(...) allows an iterable as array to e expanded in places.
+// Spread syntax example
+
+// Spread in function calls
+function sum(x, y, z) {
+    return x + y + z;
+}
+const numbers = [1, 2, 3];
+// Using spread operator to pass array elements as individual arguments
+console.log(sum(...numbers)); // 6
+
+// Spread in array literals
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+// Using spread operator to combine arrays
+const combinedArr = [...arr1, ...arr2];
+console.log(combinedArr); // [1, 2, 3, 4, 5, 6]
+
+// Spread in object literals
+const obj1 = { a: 1, b: 2 };
+const obj2 = { c: 3, d: 4 };
+// Using spread operator to combine objects
+const combinedObj = { ...obj1, ...obj2 };
+console.log(combinedObj); // { a: 1, b: 2, c: 3, d: 4 }
+
+// spread(...) allows an iterable such as an array to be expanded in places.
 
 // expand an iterable(array,string ...) into a list of argument
 console.log(Math.max(1,2,3));//3
