@@ -28,3 +28,19 @@ function Welcome(props) {
     return <h1>Hello, {props.name}</h1>;
 }
 ```
+## How to Use a Functional Component in JSX
+
+To use a functional component in your JSX, you simply need to include it like any other HTML element. You can pass props to the component as attributes.
+
+Example:
+```jsx
+function App() {
+    return (
+        <div>
+            <Welcome name="Alice" />
+        </div>
+    );
+}
+```
+
+In this example, the `Welcome` component is used three times with different `name` props. Each instance of the `Welcome` component will render a personalized greeting.
