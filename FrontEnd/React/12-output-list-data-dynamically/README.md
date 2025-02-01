@@ -13,8 +13,9 @@
 
 ## automate way 
 * we can use map for mapping items of data array 
+* we should add key prop that should be unique too for react to update and render list efficient
 ```js
 <ul>
-    {CORE_CONCEPTS.map((item)=><CoreConcept {...item}/>)}
+    {CORE_CONCEPTS.map((item)=><CoreConcept key={item.title} {...item}/>)}
 </ul>
 ```
