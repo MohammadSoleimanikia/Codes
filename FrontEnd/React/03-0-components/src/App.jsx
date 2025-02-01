@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 function Header() {
   return (
     <header>
@@ -13,12 +14,12 @@ function Header() {
 
 function App() {
   return (
-    <div>
+    <Fragment>
       <Header/>
       <main>
         <h2>Time to get started!</h2>
       </main>
-    </div>
+    </Fragment>
   );
 }
 

@@ -36,9 +36,38 @@ Example:
 ```jsx
 function App() {
     return (
+            <Welcome name="Alice" />
+    );
+}
+```
+## fragments 
+* if we want to return component we should wrap them in a container (div) because we can't return multiple things in function
+```jsx
+function App() {
+    return (
+        // if we want to use two component we use fragment (div)
         <div>
             <Welcome name="Alice" />
         </div>
+    );
+}
+```
+* using div as container have a problem that when page rendered an extra div is also rendered.
+### fragment component usage:
+* with using fragment we dont have extra div in our rendered page 
+
+1. import fragment from react
+```js
+import {Fragment} from 'react'
+```
+2. use fragment instead of div 
+```jsx
+function App() {
+    return (
+        // if we want to use two component we use fragment (div)
+        <Fragment>
+            <Welcome name="Alice" />
+        </Fragment>
     );
 }
 ```
