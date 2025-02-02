@@ -6,9 +6,9 @@ In React, you can also set the wrapper type dynamically based on props. This all
 ### DynamicWrapper Component
 
 ```jsx
-export default function DynamicWrapper({ Component = 'div', children, ...props }) {
+export default function DynamicWrapper({ Container = 'div', children, ...props }) {
     // first letter of prop for wrapper type should be uppercase
-    return <Component {...props}>{children}</Component>;
+    return <Container {...props}>{children}</Container>;
 }
 ```
 
@@ -20,10 +20,13 @@ import DynamicWrapper from './DynamicWrapper';
 function App() {
     return (
         <div>
-            <DynamicWrapper as="section" className="section-class">
+            <DynamicWrapper container="section" className="section-class">
                 <p>This is wrapped in a section element</p>
             </DynamicWrapper>
-            <DynamicWrapper as="article" className="article-class">
+            
+            //if we want to use custom component instead of predefined HTML(div,menu,section,...) 
+            // we should use bracket 
+            <DynamicWrapper container={CustomComponent} className="article-class">
                 <p>This is wrapped in an article element</p>
             </DynamicWrapper>
         </div>
