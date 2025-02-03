@@ -77,7 +77,7 @@ const initialGameBoard = [
 ```
 
 ### update object state immutably 
-* In React, it's important to update object state immutably to ensure that the state changes are detected correctly and the components re-render as expected.
+* In React, it's important to update object and arrays state immutably to ensure that the state changes are detected correctly and the components re-render as expected.
 * Instead of modifying the existing state object directly, create a new object with the updated values.
 * Use the spread operator (`...`) to copy the existing state and then override the specific properties that need to be updated.
 ```js
