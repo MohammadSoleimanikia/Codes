@@ -44,7 +44,7 @@ body {
   justify-content: space-evenly;
   gap: 1.5rem;
 }
-
+  
 #user-input label {
   display: block;
   margin-bottom: 0.25rem;
