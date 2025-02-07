@@ -35,8 +35,10 @@ function handleChange(inputIdentifier, newValue) {
 ```
 
 3. input with two way binding :
-* way 1 : from input to state = use onChange 
-* way 2 :from state to input = use value 
+
+- way 1 : from input to state = use onChange
+- way 2 :from state to input = use value
+
 ```js
 <input
   type="number"
@@ -44,4 +46,62 @@ function handleChange(inputIdentifier, newValue) {
   value={userInput.annualInvestment}
   onChange={(event) => handleChange("annualInvestment", event.target.value)}
 />
+```
+
+### lifting state up
+
+- we need input data in Results component to use and calculate the results so we need to lift input data state to app component.
+
+1. move state to app component
+
+```js
+const [userInput, setUserInput] = useState({
+  initialInvestment: 10000,
+  annualInvestment: 1200,
+  expectedReturn: 6,
+  duration: 10,
+});
+```
+
+2. move state handler to app
+
+```js
+function handleChange(inputIdentifier, newValue) {
+  setUserInput((prevUserInput) => {
+    return {
+      ...prevUserInput,
+      [inputIdentifier]: newValue,
+    };
+  });
+}
+```
+
+3. give state handler and userInput as props to input component
+
+```jsx
+<UserInput onChange={handleChange} userInput={userInput} />
+```
+
+### display result data into list
+
+```jsx
+{
+  resultsData.map((yearData) => {
+    const totalInterest =
+      yearData.valueEndOfYear -
+      yearData.annualInvestment * yearData.year -
+      initialInvestment;
+    const totalAmountInvested = yearData.valueEndOfYear - totalInterest;
+
+    return (
+      <tr key={yearData.year}>
+        <td>{yearData.year}</td>
+        <td>{formatter.format(yearData.valueEndOfYear)}</td>
+        <td>{formatter.format(yearData.interest)}</td>
+        <td>{formatter.format(totalInterest)}</td>
+        <td>{formatter.format(totalAmountInvested)}</td>
+      </tr>
+    );
+  });
+}
 ```
