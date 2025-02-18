@@ -76,3 +76,75 @@ const emailNotValid = submitted && !enteredEmail.includes('@');//condition
  ```
  * after we the build process this p tag get a unique class name like this _paragraph_zc83l_55
 
+## styled components
+* Styled-components is a library for React and React Native that allows you to use component-level styles in your application.
+* It uses tagged template literals to style your components.
+
+### usage 
+1. install package : npm install styled-components 
+2. import in project : ```js import {styled} from 'styled-components' ```
+3. use for element that we want .for div :styled.div
+
+```js
+// don't need to write css code with camel case we can write standard css codes
+// it give us a styled component that we can use it 
+// ps: name of variable should start with uppercase letter
+const ControlContainer= styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+`
+```
+4. we can also wrap it around other codes 
+
+```js
+<ControlContainer>
+    <p>something</p>
+</ControlContainer>
+```
+
+### styled components conditionally 
+* we can receive props in styled components 
+1. add props to component for styling conditionally . naming convention is that name is better to start with $ sign 
+```js
+<Label $invalid={emailNotValid}>Email</Label>
+```
+2. use props to style conditionally 
+```js
+const Label =styled.label`
+  color:${(props)=>props.$invalid? '#f87171':'#6b7280'}
+`
+```
+### using pseudo selector nested rules and media queries with styled components 
+
+* nested rules: if we have an img tag inside Header we add that with & sign 
+* for media query we also add & sign instead of our element
+```js
+const StyledHeader=styled.header`
+    display: flex;
+    // header img {} convert to bellow syntax
+   & img {
+   width:100%;
+   }
+
+   //media query
+   @media (min-width: 768px) {
+    & {
+      margin-bottom: 4rem;
+    }
+  
+    & h1 {
+      font-size: 2.25rem;
+    }
+  }
+`
+```
+* for pseudo selector we also add & sign instead of our element
+```js 
+const Button = styled.button`
+  &:hover {
+  background-color: #f0920e;
+}
+`
+```
