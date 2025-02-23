@@ -35,3 +35,11 @@ const App = () => {
     );
 };
 ```
+## closing modal via ESC Escape key 
+The <dialog> element allows website visitors to close the opened dialog by pressing the ESC (Escape) key on their keyboard.
+if we want to do something on close the modal we use onClose event 
+```jsx
+<dialog ref={dialog} className="result-modal" onClose={onReset}
+   ...
+</dialog>
+```
