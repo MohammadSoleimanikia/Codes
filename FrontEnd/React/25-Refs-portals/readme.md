@@ -124,7 +124,6 @@ function handleStart() {
 
 
 ```
-
 ## Refs vs States
 | State | Refs |
 |------|------|
@@ -132,3 +131,38 @@ function handleStart() {
 | should be used for values that are directly reflected in the UI | can be used to gain direct DOM element accessing certain browser APIs|
 | should not be used for behind the scenes values that have no direct UI impact||
 | 4. Use ref for connection to HTML element | |
+
+# portals 
+Portals provide a way to render children into a DOM node that exists outside the hierarchy of the parent component. This can be useful for scenarios where you need to break out of the typical DOM structure, such as rendering a modal, tooltip, or dropdown menu.
+
+### Why Use Portals
+1. **Modals and Overlays**: Portals allow you to render modals and overlays outside the main DOM hierarchy, preventing issues with z-index and stacking context.
+2. **Tooltips and Popovers**: They enable rendering tooltips and popovers in a way that avoids clipping and positioning issues.
+3. **Performance**: Portals can improve performance by reducing the number of re-renders needed for certain components.
+
+### How to Use Portals
+To create a portal, use the `ReactDOM.createPortal` method. This method takes two arguments: the JSX to render and the DOM node to render it into.
+
+```jsx
+import ReactDOM from 'react-dom';
+
+function Modal({ children }) {
+    return ReactDOM.createPortal(
+        <div className="modal">
+            {children}
+        </div>,
+        document.getElementById('modal-root')
+    );
+}
+```
+
+In your HTML, ensure you have a `div` with the id `modal-root`:
+
+```html
+<body>
+    <div id="root"></div>
+    <div id="modal-root"></div>
+</body>
+```
+
+Now, you can use the `Modal` component to render content into the `modal-root` div, outside the main application DOM hierarchy.
