@@ -71,5 +71,13 @@ function App() {
     );
 }
 ```
-
+* most React projects (e.g., projects created with Vite or create-react-app) offer an even shorter form:
+```jsx
+return (
+  <>
+    <h2>Welcome!</h2>
+    <p>React is awesome!</p>
+  </>
+);
+```
 In this example, the `Welcome` component is used three times with different `name` props. Each instance of the `Welcome` component will render a personalized greeting.
