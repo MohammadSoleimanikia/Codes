@@ -43,3 +43,10 @@ if we want to do something on close the modal we use onClose event
    ...
 </dialog>
 ```
+
+## styling shadow behind modal with tailwind :
+use backdrop: then add tailwind class for styling 
+```jsx
+// add slate color with some transparency
+<dialog className="backdrop:bg-slate-900/90">
+```
