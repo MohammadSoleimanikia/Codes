@@ -41,7 +41,7 @@ function App() {
 }
 ```
 ## fragments 
-* if we want to return component we should wrap them in a container (div) because we can't return multiple things in function
+* if we want to return multiple components we should wrap them in a container (div) because we can't return multiple things in function
 ```jsx
 function App() {
     return (
