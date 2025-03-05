@@ -22,12 +22,16 @@ In this example, the `data` prop is passed from `ParentComponent` to `GrandChild
 
 In our project we pass tasks data like this (prop drilling):
 NewTask ->task -> SelectedProject 
-1. ```jsx 
+
+1. 
+```jsx 
 <SelectedProject onAddTask={handleAddTask} onDeleteTask={handleDeleteTask}/>;
 ```
-2.```jsx 
+2.
+```jsx 
 <Task onAdd={onAddTask} onDelete={onDeleteTask}/>
 ```
-3.```jsx 
+3.
+```jsx 
 <Task onAdd={onAddTask} onDelete={onDeleteTask}/>
 ```
