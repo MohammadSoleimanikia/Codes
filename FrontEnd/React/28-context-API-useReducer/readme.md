@@ -168,7 +168,7 @@ usage
 ```
 
 # useReducer
-seReducer is a React Hook used for managing complex state logic.
+useReducer is a React Hook used for managing complex state logic.
 It’s an alternative to useState, especially when state transitions depend on previous state values or involve multiple sub-states.
 
 Why Use useReducer Instead of useState?
