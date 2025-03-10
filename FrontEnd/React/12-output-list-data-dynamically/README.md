@@ -64,3 +64,36 @@ const UserList = () => {
 * If the order of items changes, React may mix up the elements.
 * If an item is added/removed, React may reuse the wrong DOM elements.
 * This can cause UI bugs and bad performance.
+
+### using key for resetting components
+If you want to reset a component’s state or force it to re-mount, the best way is by changing its key prop.
+When React detects a new key, it destroys the old component and creates a fresh one.
+
+#### Example: Resetting form
+```jsx
+import { useState } from "react";
+
+const Form = () => {
+  const [key, setKey] = useState(0); // Unique key to force re-mount
+
+  return (
+    <div>
+      <button onClick={() => setKey((prev) => prev + 1)}>Reset Form</button>
+      <UserForm key={key} />
+    </div>
+  );
+};
+
+const UserForm = () => {
+  const [name, setName] = useState("");
+  return (
+    <input
+      type="text"
+      placeholder="Enter name"
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
+  );
+};
+export default Form;
+```
