@@ -51,3 +51,6 @@ const initialCountIsPrime = useMemo(()=>isPrime(initialCount),[initialCount]);
 ```
 
 * `IMPORTANT` don't use useMemo on simple functions because using useMemo costs performance each time that executed
+
+## million.js
+Million.js is a lightweight, high-performance virtual DOM library that speeds up React rendering. This guide will help you integrate Million.js into a React project using Vite.
