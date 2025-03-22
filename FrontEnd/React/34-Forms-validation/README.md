@@ -96,4 +96,20 @@ adding validation upon submit is always a good idea even we validate our inputs 
 ```jsx
 <input id="password" type="password" name="password" required minLength={8}/>
 ```
-* 
+## mixin custom and build in validation 
+ex: check if confirm pass and pass are equal 
+```jsx
+ const [passwordsAreNotEqual,setPasswordsAreNotEqual]=useState(false);
+ function handleSubmit(event){
+    // some codes
+    // using square bracket because - is not valid 
+    if (data.password !== data['confirm-password']){
+      setPasswordsAreNotEqual(true);
+      // stop running any further codes 
+      return;
+    }
+    // these codes can't run if passwords are not match.
+    console.log(data);
+    event.target.reset();
+  }
+```
