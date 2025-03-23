@@ -113,3 +113,111 @@ ex: check if confirm pass and pass are equal
     event.target.reset();
   }
 ```
+## building and using a Reusable input component 
+in stateLogin we have similar codes for email and password so we make a component to remove repetition 
+1. add Input.jsx file 
+```jsx
+export default function Input({ label, id, error, ...props }) {
+  return (
+    <div className="control-row">
+      <div className="control no-margin">
+        <label htmlFor={id}>{label}</label>
+        <input id={id} {...props} />
+        <div className="control-error">
+          {emailIsInvalid && <p>Please enter a valid email address</p>}
+        </div>
+      </div>
+    </div>
+  );
+}
+```
+
+2. use in stateLogin.jsx
+```jsx
+<Input
+          label="Email"
+          id="email"
+          type="email"
+          name="email"
+          onChange={(event) => handleInputChange("email", event.target.value)}
+          onBlur={() => handleInputBlur("email")}
+          value={enteredValue.email}
+          error={emailIsInvalid && "Please enter a valid email "}
+        />
+        <Input
+          label="Password"
+          id="password"
+          type="password"
+          name="password"
+          onChange={(event) => handleInputChange("password", event.target.value)}
+          onBlur={() => handleInputBlur("password")}
+          value={enteredValue.password}
+          error={passwordIsInvalid && "Please enter a valid password "}
+        />
+```
+
+## outsourcing validation Logic 
+
+```jsx 
+export function isEmail(value) {
+  return value.includes('@');
+}
+
+export function isNotEmpty(value) {
+  return value.trim() !== '';
+}
+
+export function hasMinLength(value, minLength) {
+  return value.length >= minLength;
+}
+
+export function isEqualsToOtherValue(value, otherValue) {
+  return value === otherValue;
+}
+```
+2. using functions for validation 
+```jsx
+import { isEmail,isNotEmpty,hasMinLength } from "../util/validation";
+const emailIsInvalid =didEdit.email &&!isEmail(enteredValue.email);
+```
+
+## create a custom useInput hook 
+we need custom hook because we manage some state in stateLogin.jsx so we cant use regular function 
+1. adding a hooks folder 
+2. add useInput into hooks folder 
+```jsx
+import { useState } from "react";
+// set value for input and function to validate input
+export function useInput(defaultValue,validationFN) {
+  const [enteredValue, setEnteredValue] = useState(defaultValue);
+  const [didEdit, setDidEdit] = useState(false);
+
+  const valueIsValid=validationFN(enteredValue);
+
+  function handleInputChange(event) {
+    setEnteredValue(event.target.value);
+    setDidEdit(false);
+  }
+  function handleInputBlur() {
+    setDidEdit(true);
+  }
+
+//   expose methods to the components 
+  return {
+    value:enteredValue,
+    handleInputChange,
+    handleInputBlur,
+    hasError:didEdit && !valueIsValid
+  }
+}   
+
+```
+3. use hook in component 
+```jsx
+const {
+    value: passwordValue,
+    handleInputChange: handlePasswordChange,
+    handleInputBlur: handlePasswordBlur,
+    hasError: passwordHasError,
+  } = useInput('', (value) => hasMinLength(value, 6));
+```
