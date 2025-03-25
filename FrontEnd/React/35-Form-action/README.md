@@ -144,3 +144,25 @@ use this object into input section in `defaultValue` props
         </div>
 ```
 
+## moving action function out of the component 
+* if in the action function we not using any component specific data we can move the function out of the component 
+```jsx
+import { useActionState } from "react";
+// action function out of the component
+function signupAction(prevFormState, formData) {
+//   codes for form action
+}
+
+export default function Signup() {
+  
+  const [formState, formAction] = useActionState(signupAction, {
+    errors: null,
+  });
+  return (
+    <form action={formAction}>
+    // form codes
+    </form>
+  );
+}
+
+```
