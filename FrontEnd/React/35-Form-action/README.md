@@ -74,6 +74,7 @@ import { useActionState } from "react";
 - first argument is action function
 - second argument should be the initial value because until the form did not submitted we don't have the value
   it return three element
+returned values:
 - current form state in our example first time is null then maybe errors added to this
 - updated form action : its our form action with extra features and this is should added as value to form `action` prop
 - pending element: which is true or false depending on whether the form is currently submitted or not (optional)
