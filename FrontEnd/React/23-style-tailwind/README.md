@@ -23,6 +23,7 @@ export default defineConfig({
 ```bash
 npm run dev
 ```
+5- add tailwind.connfig.js for auto correction
 ## media query in tailwind 
 * add prefix before class name 
 * sm ,md ,lg ,...
