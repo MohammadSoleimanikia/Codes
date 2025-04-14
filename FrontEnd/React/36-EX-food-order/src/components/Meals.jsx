@@ -1,21 +1,21 @@
 import MealItem from "./MealItem";
-import { useEffect, useState } from "react";
+import useHttp from "../hooks/useHttp";
+import Error from "./Error";
+// define outside because it doesn't recreated each time for component so useHttp send a request on loop
+const requestConfig={};
 export default function Meals() {
-  const [meals, setMeals] = useState([]);
-  useEffect(() => {
-    // using another function to use async 
-    async function fetchData() {
-        // http req to backend
-      const res = await fetch("http://localhost:3000/meals");
-      const resData = await res.json();
-      setMeals(resData);
-    }
-    fetchData();
-  }, []);
+  // use custom hook
+  const {data:loadedMeals,isLoading,error}=useHttp('http://localhost:3000/meals',requestConfig,[])
+  if(isLoading){
+    return <p className="center">Fetching meals...</p>
+  }
+  if(error){
+    return <Error title="failed to fetch meals" message={error}/>
+  }
   return (
     <>
       <ul id="meals">
-        {meals.map((item) => {
+        {loadedMeals.map((item) => {
           return <MealItem key={item.id} meal={item}/>
         })}
       </ul>

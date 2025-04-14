@@ -16,4 +16,18 @@ const  CartContext=createElement({
     removeItem:(id)=>{}
 });
 ```
-5. make context provider to wrap around components and make context available to them and do the actual data management and state managee
+5. make context provider to wrap around components and make context available to them and do the actual data management and state manage
+
+using modal
+use portal 
+
+```jsx
+import { createPortal } from "react-dom"
+export default function Modal (){
+return createPortal(<dialog></dialog>,document.getElementById('modal'))
+}
+```
+using another context to show modal 
+use clean up function for closing modal : clean up function runs on the next cycle .
+
+use Form action and useActionState hook
