@@ -79,4 +79,6 @@ const store=createstore(counterReducer);
     <button onClick={increaseHandler}>Increase by 5</button>
     ```
 ## working with multiple state properties 
-to add toggle functionality we add a new state named `show` to store for toggle between display and show the counter 
+to add toggle functionality we add a new state named `show` to store for toggle between display and hiding the counter 
+
+1. 
