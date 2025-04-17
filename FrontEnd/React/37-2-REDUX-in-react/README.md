@@ -298,3 +298,48 @@ const isAuthenticated = useSelector(
     isAuthenticated && <UserProfile />;
 }
 ```
+#### splitting codes in store (put every slice in its own file)
+when we use redux tool-kit it is better to put every slice in its file 
+1. move initial state and lice code into another file 
+2. export slice as default 
+3. use the slice in store `index.js` file 
+
+Counter Slice
+```js
+import { createSlice } from "@reduxjs/toolkit";
+const initialCounterState={counter:0,show:true}
+const counterSlice= createSlice({
+    name:'counter',
+    initialState:initialCounterState,
+    reducers:{
+        increment(state){
+            state.counter++;
+        },
+        decrement(state){
+            state.counter--
+        },
+        increase(state,action){
+            state.counter= state.counter + action.payload
+        },
+        toggleCounter(state){
+            state.show=!state.show
+        }
+    }
+})
+
+export default counterSlice.reducer
+export const counterActions = counterSlice.actions;
+```
+
+index.js file 
+```js
+import {configureStore } from '@reduxjs/toolkit'
+import counterReducer from './counter';
+
+const store=configureStore({
+    reducer:{
+        counter:counterReducer,
+    }
+});
+export default store;
+```
